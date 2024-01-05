@@ -1,5 +1,3 @@
-
-
 ===== LEVEL 1: (POSSIBLE project assignment) -> MOD 323 ===== 
 
 APPLICATIVE QUESTIONS (Data, model, expected output)  
