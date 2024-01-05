@@ -1,0 +1,120 @@
+
+
+===== LEVEL 1: (POSSIBLE project assignment) -> MOD 323 ===== 
+
+APPLICATIVE QUESTIONS (Data, model, expected output)  
+
+    Relationship between reservoir properties and production performance 
+
+    Prediction of porosity based on seismic characteristics  
+
+    Classification of rock types based on well log data 
+
+    Forecasting Production based on historical data 
+
+    Detection of anomaly based on unsupervised learning method 
+
+    Optimization drilling parameter by real time data 
+
+    Spatial statistics for reservoir heterogeneity 
+
+    Efficiency of EOR methods based on field data 
+
+    Quality Control of Data acquisition using AI*** 
+
+    Decision tree and random forest application 
+
+ 
+
+===== LEVEL 2: ===== 
+
+INTRO for GEO Project assignment Mod 323 
+
+    Which Statistical methods for subsurface data analysis? 
+
+    How ML improve the predictive capabilities in subsurface domain? 
+
+    How Neural Network methods works for subsurface situations? 
+
+    How Bayesian statistics streamline subsurface models? 
+
+    How AI and ML helps in real-time monitoring and decision analysis for subsurface domain? 
+
+ 
+
+===== LEVEL 3: =====
+
+GEO 
+
+    Subsurface data analysis? 
+
+    Subsurface domain? 
+
+    Subsurface situations? 
+
+    Streamline subsurface models? 
+
+    Subsurface domain? 
+
+ 
+
+ 
+
+ 
+
+INTRO 
+
+    How AI differs from traditional computational methods? 
+
+    Statistical methods for data analysis? 
+
+    How ML improve predictive capabilities? 
+
+    How Neural Network methods works ? 
+
+    Bayesian statistics models? 
+
+    How AI and ML helps in real-time monitoring and decision analysis? 
+
+ 
+
+ 
+
+===== LEVEL 4:  =====
+MORE 
+
+    What is a traditional method 
+
+    What is AI 
+
+    What is ML 
+
+    What is NN 
+
+    What is a Bayesian approach 
+
+    What is decision analysis 
+
+    What is real time monitoring 
+
+ 
+
+PYTHON 
+
+    Vanilla 
+
+    Numpy 
+
+    Pandas 
+
+    MatPlotLib ---- < NESTOR 
+
+    Sklearn 
+
+    tensorflow 
+
+    Pythorch  
+
+    Pydecision ?  
+
+ 
