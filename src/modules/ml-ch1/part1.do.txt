@@ -2,7 +2,7 @@ TITLE: On Schemes for Exponential Decay
 AUTHOR: Hans Petter Langtangen Email:hpl@simula.no {copyright|CC BY} at Center for Biomedical Computing, Simula Research Laboratory & Department of Informatics, University of Oslo
 DATE: today
 
-FIGURE: [fig/CN_logo, width=300 frac=0.3]
+FIGURE: [../modules/fig/CN_logo, width=300 frac=0.3]
 
 ## Comments start with a # and are visible as comments in the
 ## output. Lines starting with ## are also comments, but not visible
@@ -63,7 +63,7 @@ demonstrated.
 ======= Problem setting and methods =======
 # Short title: Problem
 
-FIGURE: [fig/method, width=600 frac=0.8]
+FIGURE: [../modules/fig/method, width=600 frac=0.8]
 
 ## New slide is indicated by !split at the beginning of a line:
 
@@ -105,7 +105,7 @@ Here,
 ## width in HTML. A caption can be added (after [...]).
 
 !bslidecell 01
-FIGURE: [fig/teacher2, width=250 frac=0.5]
+FIGURE: [../modules/fig/teacher2, width=250 frac=0.5]
 !eslidecell
 
 !split
@@ -162,7 +162,7 @@ MOVIE: [http://youtu.be/PtJrPEIHNJw, width=640 height=480]
 
 !bblock Implementation in a Python function:
 
-@@@CODE code/solver.py  fromto: def solver@def exact_solution
+@@@CODE ../modules/code/solver.py  fromto: def solver@def exact_solution
 
 !eblock
 
@@ -197,14 +197,14 @@ plt.show()
 !split
 ======= Results =======
 
-FIGURE: [fig/results, width=600 frac=0.8]
+FIGURE: [../modules/fig/results, width=600 frac=0.8]
 
 !split
 ===== The Crank-Nicolson method shows oscillatory behavior for not sufficiently small time steps, while the solution should be monotone =====
 
 ## Figure filenames do not need extension - the right version is picked
 
-FIGURE: [fig/CN, width=600 frac=0.9]
+FIGURE: [../modules/fig/CN, width=600 frac=0.9]
 
 !split
 ===== The artifacts can be explained by some theory =====

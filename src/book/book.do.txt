@@ -26,13 +26,13 @@ TOC: on
 ========= Preliminaries  =========
 label{ch:pre}
 
-# #include "../modules/intro/intro.do.txt"
+# #include "../modules/intro.do.txt"
 
 !split
 ========= Introduction to practical applications   =========
 label{ch:pr}
 
-# #include "../modules/import/import.do.txt"
+# #include "../modules/part_1.do.txt"
 
 !split
 ======= References =======

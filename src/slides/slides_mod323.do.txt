@@ -2,5 +2,5 @@ TITLE: Study Guide: Some title
 
 
 
-# #include "ml-ch1/part1.do.txt"
+# #include "../modules/ml-ch1/part1.do.txt"
 
