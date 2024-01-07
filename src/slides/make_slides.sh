@@ -28,7 +28,7 @@ function system {
 # (Smart to make this first to detect latex errors - HTML/MathJax
 # gives far less errors and warnings)
 rm -f *.aux
-preprocess -DFORMAT=pdflatex ../newcommands_keep.p.tex > newcommands_keep.tex
+preprocess -DFORMAT=pdflatex ../newcommands.p.tex > newcommands_keep.tex
 system doconce format pdflatex $filename --latex_admon=paragraph --latex_code_style=lst-yellow2
 doconce replace 'section{' 'section*{' ${filename}.tex
 system pdflatex $filename

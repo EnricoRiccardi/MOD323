@@ -33,6 +33,10 @@ label{ch:pre}
 label{ch:pr}
 
 # #include "../modules/part_1.do.txt"
+# #include "../modules/part_2.do.txt"
+# #include "../modules/part_3.do.txt"
+# #include "../modules/git.do.txt"
+# #include "../modules/generative_ai.do.txt"
 
 !split
 ======= References =======

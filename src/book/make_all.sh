@@ -7,7 +7,8 @@ function system {
   fi
 }
 
-
+cp ../scripts.py .
 system python -c "import scripts as s; s.compile_chapters()"
+rm scripts.py
 system ./make.sh
 system ./make_html.sh

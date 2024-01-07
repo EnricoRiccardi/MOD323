@@ -1,21 +1,46 @@
 !split
-======= Is it possible to learn Machine Learning in Python in two days? =======
+======= What are we talking about? =======
+Artificial Intelligence (AI): A field of computer science dedicated to creating systems capable of performing tasks that require human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.
+
+Machine Learning (ML): A subset of AI that involves the development of algorithms and statistical models that enable computers to perform tasks. A model is tuned in a learning phase and it can then make inferences from unseen data.
+
+AI is a development of ML.
+
+
+!split
+======= Is it possible to master Machine Learning in Python in two days? =======
 No.
 
 
 !split
-======= What is the point then? What to expect? =======
-Machine learning is a rapidly expanding field, constantly evolving and developing.
-The pace of development is so fast that even professionals working in ML daily struggle to keep up with the field's advancements. 
-In just two days, one cannot expect to become an expert, yett we will cover the key aspects of ML and explore the opportunities it offers. 
-We will introduce the major ML python libraries available and apply a set of them in hands-on exercises and tutorials, with applications in geophysics and other areas.
+======= What is the point then? =======
+ML is an immense field, up to the point that developers are specialising more and more on particular aspects, loosing the overall view of the demain.
+ML can be tought as a very large toolset. Each tool is aimed to solve a particular type of problem. It is up to an user to frame a task (using the domain expertise) as a problem that can be then solved with a ML approach.   
+
+The aim of this course is exactly this. We will thus get an overview on what questions can be answered with ML, how data might be used and what output can be obtained.  
+
+
+!split
+======= Why Python? =======
+Most ML/AI developers have released their code as Python packages. By using Python, we can actually use various algorithms that are currently available.
+
+This means that, with python, we will be able use and test the newest ML software. We then will be able to make the necessary adaptations for various tasks.  
+
+!split
+======= What to expect? =======
+A good and solid introcution to Machine Learning. 
+An introduction to the major ML python libraries available.
+A set of hands-on exercises and tutorials, with applications in geophysics and other areas.
+
 
 !split
 ======= About this course =======
-This course is designed to help you formulate questions that can be effectively addressed using machine learning approaches. Through various examples, we will explore how data can be gathered, refined, and ideally utilized to train machine learning algorithms. We will also discuss the realistic expectations and limitations of such methods. Moreover, the course will guide you in developing your own Python code to tackle various, manageable ML challenges. We will create ML programs using generative AI and other freely available code repositories within the Python ecosystem.
+My objective with this course is to show how to formulate questions that can be effectively addressed using machine learning approaches. Through various examples, we will explore how data can be gathered, refined, and ideally utilized to train machine learning algorithms. We will also discuss the realistic expectations and limitations of such methods. Moreover, the course will guide you in developing your own Python code to tackle various, manageable ML challenges. We will create ML programs using generative AI and other freely available code repositories within the Python ecosystem.
 
 !split
 ======= Online Machine Learning python libraries =======
+We will use a set of machine learning libraries:
+
 "skilearn": "https://scikit-learn.org/stable/index.html"
 Originally developed in affiliation with Google, it is the most used open source Python module for machine learning built on top of SciPy.
 
@@ -34,7 +59,9 @@ Keras is a deep learning API based on pytorch and sklearn.
 
 !split
 ======= Online teaching material =======
+There is plenty of material online that is worth to be checking for further learning. I personally recommend:
+
 "Applied machine learning": "https://www.youtube.com/playlist?list=PL2UML_KCiC0UlY7iCQDSiGDMovaupqc83"
 
-"machine learning with python":"https://realpython.com/learning-paths/machine-learning-python/"
+"Machine learning with python":"https://realpython.com/learning-paths/machine-learning-python/"
 
