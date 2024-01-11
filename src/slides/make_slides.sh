@@ -29,10 +29,10 @@ rm -f ${filename}.pdf
 cp ${filename}.tex ${filename}-beamer.tex  # sometimes nice to look at
 
 # Handouts
-doconce format pdflatex $filename --latex_title_layout=beamer --latex_table_format=footnotesize --latex_admon_title_no_period --latex_code_style=pyg
-doconce slides_beamer $filename --beamer_slide_theme=red_shadow --handout
-pdflatex -shell-escape $filename
-pdflatex -shell-escape $filename
-pdflatex -shell-escape $filename
-pdfnup --nup 2x3 --frame true --delta "1cm 1cm" --scale 0.9 --outfile ${filename}-beamer-handouts2x3.pdf ${filename}.pdf
-rm -f ${filename}.pdf
+# doconce format pdflatex $filename --latex_title_layout=beamer --latex_table_format=footnotesize --latex_admon_title_no_period --latex_code_style=pyg
+# doconce slides_beamer $filename --beamer_slide_theme=red_shadow --handout
+# pdflatex -shell-escape $filename
+# pdflatex -shell-escape $filename
+# pdflatex -shell-escape $filename
+# pdfnup --nup 2x3 --frame true --delta "1cm 1cm" --scale 0.9 --outfile ${filename}-beamer-handouts2x3.pdf ${filename}.pdf
+# rm -f ${filename}.pdf
