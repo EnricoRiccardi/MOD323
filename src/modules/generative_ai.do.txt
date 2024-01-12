@@ -1,4 +1,5 @@
-======= Generative AI =======
+!split
+===== Generative AI =====
 A generative AI model is a type of artificial intelligence that is designed to generate new content, based on the data it has been trained on. This content can be in various forms, such as text, images, music, code, human speech, etc. These models are typically built using machine learning techniques, particularly deep learning networks.
 
 Key characteristics of generative AI models include:

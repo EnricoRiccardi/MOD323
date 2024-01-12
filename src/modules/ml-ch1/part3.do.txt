@@ -1,0 +1,23 @@
+!split
+======= Generative AI =======
+A generative AI model is a type of artificial intelligence that is designed to generate new content, based on the data it has been trained on. This content can be in various forms, such as text, images, music, code, human speech, etc. These models are typically built using machine learning techniques, particularly deep learning networks.
+
+Key characteristics of generative AI models include:
+
+    Learning from Data: They are trained on large datasets, enabling them to learn patterns, styles, or features inherent in the data.
+
+    Generating New Content: Generative models can create new data instances. For example, a model trained on a dataset of paintings can generate new images in the style of those paintings.
+
+Trained generative models are thus able to input information at a low resolution/dimension and give output with a much greater dimensionality. Here a few examples:
+Trained generative models are thus able to input information at a low resolution/dimension
+and give output with a much greater dimensionality.
+
+Images/video: Image generation, Super-resolution, Deep fakes.
+
+Music: noise filter, voice and music generation, voice deep fake.
+
+Text(LLM): chatGPT, bard, Gemini, etc.
+
+Chemistry:  DeepMind (Alphafold).
+
+

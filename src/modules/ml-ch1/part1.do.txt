@@ -1,7 +1,3 @@
-TITLE: On Schemes for Exponential Decay
-AUTHOR: Hans Petter Langtangen Email:hpl@simula.no {copyright|CC BY} at Center for Biomedical Computing, Simula Research Laboratory & Department of Informatics, University of Oslo
-DATE: today
-
 FIGURE: [../modules/fig/CN_logo, width=300 frac=0.3]
 
 ## Comments start with a # and are visible as comments in the
@@ -197,14 +193,14 @@ plt.show()
 !split
 ======= Results =======
 
-FIGURE: [../modules/fig/results, width=600 frac=0.8]
+FIGURE: [../modules/fig/results, frac=0.8]
 
 !split
 ===== The Crank-Nicolson method shows oscillatory behavior for not sufficiently small time steps, while the solution should be monotone =====
 
 ## Figure filenames do not need extension - the right version is picked
 
-FIGURE: [../modules/fig/CN, width=600 frac=0.9]
+FIGURE: [../modules/fig/CN, frac=0.9]
 
 !split
 ===== The artifacts can be explained by some theory =====
