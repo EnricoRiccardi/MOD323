@@ -2,11 +2,15 @@ TITLE:  Applied statistics and Machine learning in Python with subsurface applic
 AUTHOR: Enrico Riccardi, University of Stavanger
 DATE: today
 
-### #include "../modules/intro.do.txt"
+FIGURE: [../figures/logo, width=100 frac=0.2]
+
+# #include "../modules/intro.do.txt"
 
 ### #include "../modules/generative_ai.do.txt"
 
-# #include "../modules/ml-ch1/part1.do.txt"
-# #include "../modules/ml-ch1/part2.do.txt"
-# #include "../modules/ml-ch1/part3.do.txt"
+### #include "../modules/experts.do.txt"
+
+### #include "../modules/ml-ch1/part1.do.txt"
+### #include "../modules/ml-ch1/part2.do.txt"
+### #include "../modules/ml-ch1/part3.do.txt"
 

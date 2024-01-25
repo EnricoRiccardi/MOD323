@@ -1,44 +1,44 @@
 !split
 ===== Who to talk to? =====
-We established that machine learning and artificial intelligence is a huge field. 
+We established that machine learning and artificial intelligence is a huge field.
 The consequence is that one need to know how to approach the field in order to get
 the proper guidance.
 
 As a parallel, if you are sick, you need to contact the right person. Contacting a surgeon will
-most likely result in a waste of time, your and her/his. Yet surgeons are between 
+most likely result in a waste of time, your and her/his. Yet surgeons are between
 the most competent people in medicine.
 
 !Split
 ===== Who does what =====
 Different disciplines and thus actors can be involved:
 
-* Data Scientists: They specialize in analyzing and interpreting complex datasets using a variety of techniques, including machine learning.
+* Data Scientists: They specialise in analysing and interpreting complex datasets using a variety of techniques, including machine learning.
 Data scientists can help you understand whether your problem can be addressed through data analysis and machine learning, and they can develop models to solve it.
 
-* Computational Engineers: These professionals specialize in designing, building, and implementing machine learning models.
+* Computational Engineers: These professionals specialise in designing, building, and implementing machine learning models.
 They have a strong background in software engineering along with expertise in machine learning algorithms.
 
-* AI Researchers or Specialists: If your problem is highly specialized or requires cutting-edge machine learning techniques,
+* AI Researchers or Specialists: If your problem is highly specialised or requires cutting-edge machine learning techniques,
 consulting with AI researchers or specialists in the specific field of AI that relates to your problem (like natural language processing, computer vision, etc.) might be beneficial.
 
 * Computer Scientists/Software Engineers with ML Experience: Some software engineers or computer scientists,
 though not exclusively focused on machine learning, might have significant experience in applying ML techniques to practical problems.
 
-* Industry-Specific Experts with ML Background: Depending on your problem, experts in a particular industry who have experience with machine learning can provide valuable insights. 
+* Industry-Specific Experts with ML Background: Depending on your problem, experts in a particular industry who have experience with machine learning can provide valuable insights.
 For example, for a healthcare-related problem, a bioinformatician or medical informatics professional with machine learning experience could be ideal.
 
-* Consultancy Firms specializing in AI and ML: There are firms that specialize in providing AI and ML solutions to a range of problems across different industries. 
+* Consultancy Firms specialising in AI and ML: There are firms that specialise in providing AI and ML solutions to a range of problems across different industries.
 They can offer a *team* of experts to work on your problem.
 
 * Academic Institutions: Universities and research institutions often have departments or labs dedicated to machine learning and AI research.
-Collaborating with an academic partner can provide access to cutting-edge research and highly specialized expertise.
+Collaborating with an academic partner can provide access to cutting-edge research and highly specialised expertise.
 
 
 !split
-===== Why so complicated? =====
-A problem to be addressed by advanced statistical method need to be sectioned into its components.
+===== Why is it so complicated? =====
+A problem to be addressed by advanced statistical methods needs to be sectioned into its components.
 
-* Data aquisition, data curing/wrangling, data preprocessing and filtering, 
+* Data acquisition, data curing/wrangling, data preprocessing and filtering,
 Domain expertise, computational engineers.
 
 * Model selection, model training, testing and validation.
@@ -49,12 +49,16 @@ Data scientist.
 
 !split
 ===== Bias in approaches selection =====
-As ML users often specialise in one or more methods, there is a consequent propensity to 
-apply such method into a the largest set of application possible.
+As ML users often specialise in one or more methods, there is a consequent propensity to
+apply such a method into the largest set of applications possible.
 
-While this is hjumanly understandable, it is not the best practice and can lead to
+While this is humanly understandable, it is not the best practice and can lead to
 bad solution.
 
+!split
+===== Hierarchy of needs =====
+
+FIGURE: [../figures/hierarchy_of_needs, width=600 frac=1.0]
 
 !split
 ===== Black Box approaches =====
@@ -78,19 +82,14 @@ Is it useful? Is it safe? Is it ethical?
 ===== Opening a Black Box =====
 But if you need to develop an insight,
 consider interpretable AI methods: it is a whole new exciting field that is now
-emerging. 
+emerging.
 
-Interpretable AI can be pivotal for ML development, because it allow the consideration of 
-different ethical concerns. 
+Interpretable AI can be pivotal for ML development, because it allow the consideration of
+different ethical concerns.
 
 
 !split
 ===== Garbage in, Garbage out =====
 This is one of the fundamental baselines of ML. It doesn't matter what approach one uses. If data are garbage, model prediction will be garbage.
-Collecting data hoping that something will come out is often the perfect recepy for disasters.
-
-
-
-
-
+Collecting data hoping that something will come out is often the perfect recipe for disasters.
 
