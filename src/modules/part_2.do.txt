@@ -1,0 +1,8 @@
+!split
+===== Supervised learning =====
+
+!split
+===== Data properties =====
+
+!split
+===== Question type =====

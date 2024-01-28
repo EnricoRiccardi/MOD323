@@ -1,0 +1,125 @@
+Instructor(s):
+Enrico Riccardi
+email: enrico.riccardi@uis.no
+office: KE-E-301B
+
+who am I?
+
+A chemical engineer graduated from the Politecnico di Torino
+PhD at M&ST university of Rolla, Missouri, USA
+Post Doc at TUD Darmstadt, Germany
+Researcher at NTNU, Trondheim, Norway
+Post Doc UiO, Oslo, Norway
+Ass. Prof. at Uis, Stavanger, Norway
+
+======= Where is the value ? Why this course?  =======
+Decisions are the cardinal. What influences your decisions has value.
+Better results comes from better decisions. Note that this is a STATISTICAL argument.
+
+Life is a sum of all your choices (Albert Camus)
+
+Here we will learn to use data to make better decisions. Each application is a mere exercise, an application of various techinques. Our aim here is to provide a good guidance how to link data to value creation. That is to understand uncertainity.
+
+We will analyse, quantify and structure models as a function of uncertainity.
+
+Probability is the language of uncertainity!
+
+
+
+Spatial and Temporal Modelling - What is it?
+
+Big data analytics: Spatial and Temporal Statistic U Big Data
+
+Spatial temp data come at a wide range of scales. ST data comes with a time/space dependent data.
+
+We need to clearify comunication of the stats analysis outcomes-
+
+
+======= Probability! =======
+Data nalytics concepts
+Data Sources and quality 
+Probability
+(list)
+Exploratory data analysis
+(list)
+
+======= Modelling =======
+Confidence intervals and hyphotesis testing
+Correlation
+Regressions
+Spatial bias 
+- Declustering
+Stationarity
+Continuity
+Variograms 
+Trend modeling and Krigin
+Machine learning
+- Principar component analysis
+- Decision trees
+
+========= Outcomes ========
+Applications:
+Energy and minela resources
+Agriculture and weather modeling
+Commodity, currencu, stock and financial markets
+Modelling associated incertainities in prices and costs
+Support decision making
+-ADD MORE-
+
+
+Tool box:
+Scale of data
+Allowing handling the many uncertainities
+Data relationship (P and physical)
+Expertise knowledge
+
+
+Example:
+Spacial simulation of porosity:
+Sequential Gaussian Simulation from data from wells (Friging)
+Financial case, stock price from Monte Carlo simulations.
+
+SURVEY!
+
+===== Class Strategy: =====
+A combination of lectures, demonstrations and hands out
+
+Lectures
+- provide the fundamental theory with a focus on practice
+
+Demonstrations 
+- python and excel
+
+Tutorials:
+- Exercise
+
+
+===== Modern statistic and Machine learning =====
+- Drammatically changes.
+- A lot of models can be used with less understanding.
+- Powerful method comes with higher responsability.
+- Statistical limitation remains even when we use more advanced method.
+- Having a good backgroud is thus still necessary. 
+
+
+===== Course delivery: =====
+The lectures will be given in the lecture room - physical attendance only.
+One day of theory, one of Q&A, tutorials and practical exercise.
+- Teaching material will be disclosed, same as assigment.
+- The assignements will be discussed in class, but the results will not be disclosed online.
+- why in class? Because we saw that this is the most effective approach.
+- Please do not be a mere spectator.
+
+===== Assessment =====
+Why? 
+- To encourace to revise and structure your knowledge.
+- Test your understanding and learning (not your memory).
+- Assignements have to be passed.
+
+===== Books and References =====
+Data Science for Geoscience, Cambrige University Press, 2023
+
+time-seies-python
+
+
+
