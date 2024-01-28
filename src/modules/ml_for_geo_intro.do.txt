@@ -1,0 +1,80 @@
+!split
+===== What ML can do in GEO? =====
+
+!bpop
+o Handle too large dataset
+o Handle dataset with too many dimensions
+o Automate long repetitive and low value tasks
+o Support decision making
+o Implement expert assesment
+o Provide visualization and analysis
+o Correct models with data (e.g. geosteering)
+!epop
+
+!split
+===== Application examples =====
+It all starts from the question! 
+
+Is data fit for the task? 
+
+!bpop
+o Prompt anamolous operation conditions (safe drilling).
+Frequency? Resolution? Interpretability? Variable types?
+o Feature detection/guided interpretation.
+Significance? Labeling strategy? Correlated data? Statistical interactions?
+!epop 
+
+!spilt
+===== General Work Flow =====
+Also in geo applications, a predominant quantity of time/effort shall be dedicated to data retrival, preparation, interpretation.
+
+!bpop
+o Data preparation
+o Model selection
+o Model training and tuning
+o Model testing, inference and validation
+o Result intepretation
+!epop
+
+
+!split
+===== Data preparation =====
+The hands on operation begin with the data!
+
+!bpop
+o metadata preparation
+o dataset preparation
+o filtering
+o cure data
+!epop
+
+!split
+===== Metadata =====
+
+Data without metadata are just numbers: useless.
+
+Metadata quality is a necessary pre-condition
+!bpop
+!bblock What is metadata?
+A set of data that described and fives information about other data [wiki]
+!eblock
+!epop
+
+!split
+===== Black box =====
+
+Machine learning offers a (super) large set of statistical based tools that are, in essence, a black box. 
+
+!bblock Use with CAUTION!
+As every black box, they are not fully reliable.
+!eblock
+
+Here some guide:
+!epop
+o Use the simplest approach! 
+o Consider approach quality! 
+o Compare your results with benchmarks.
+o Avoid not reporducible studies.
+o Prioritize intepretability above computational speed and accuracy.
+!epop
+
