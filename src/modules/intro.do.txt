@@ -4,12 +4,13 @@ Artificial Intelligence (AI): A field of computer science dedicated to creating 
 
 Machine Learning (ML): A subset of AI that involves the development of algorithms and statistical models that enable computers to perform tasks. A model is tuned in a learning phase and it can then make inferences from unseen data.
 
-AI is a development of ML.
+AI contains ML.
 
 
 !split
 ======= Is it possible to master Machine Learning in Python in two days? =======
 No.
+
 
 
 !split
