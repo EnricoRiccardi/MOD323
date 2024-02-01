@@ -70,7 +70,7 @@ As every black box, they are not fully reliable.
 !eblock
 
 Here some guide:
-!epop
+!bpop
 o Use the simplest approach! 
 o Consider approach quality! 
 o Compare your results with benchmarks.
