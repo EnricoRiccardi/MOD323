@@ -1,0 +1,77 @@
+!split
+===== Statistics =====
+
+!bblock Definition 
+Statistics is the science of acquiring and utilizing data
+!eblock
+
+!bpop
+* It comprises tools for data collection, summarization, and interpretation.
+
+* The aim is identifying the underlying structure, trends, and relationships inherent in the data.
+
+* Is it all statistics then? Yes.
+
+* _Numbers to data, data to information_
+!epop
+
+!split
+===== Data properties =====
+Before to talk about machine learning, we need to establish some terminology.
+
+!bpop
+!bblock Population
+The universe of all possible outcomes and events,
+!eblock
+
+!bblock Sample
+A finite subset extracted from the population
+!eblock
+
+!bblock Exaustivity
+The samples coverd the population spectra.
+!eblock
+
+!bblock Representativity 
+The population is properly described by the samples.
+!eblock
+!epop
+
+
+!split
+===== Big data =====
+We speak of bid data hen dataset are very large: i.e. many instances and features
+Models have thus a large set of parameters (and often no one has a clue anymore of what is going on).
+
+!bpop
+* Volume of data
+* Variety different type of data sources with different length and scale.
+* Frequency of data generation
+!epop
+
+
+
+!split
+===== Sampling =====
+
+Samples shall have not bias (to be randomly selected). If not, the bias have to be corrected for.
+
+!bpop
+!bblock Cycle of data (curing)
+o Data is collected
+o Checked upon
+o Some modelling
+o Analysis and visualization
+o AnOmLiEs and outliers detection (exclusion?)
+!eblock
+!epop
+
+
+!split
+===== Data expectation =====
+
+FIGURE: [../figures/data, width=600 frac=0.8]
+
+
+
+
