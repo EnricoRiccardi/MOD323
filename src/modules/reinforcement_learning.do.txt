@@ -1,5 +1,0 @@
-===== Reinforcement learning =====
-
-=== Data properties ===
-
-=== Question type ===
