@@ -1,0 +1,16 @@
+!split
+===== Loss function =====
+From the code in "mse_scaling_2.py", use sklearn.metrics to compute mse and compare its peformances.
+
+!split
+===== Loss function, regression =====
+o Make your own solver using Mean Absolute Error Loss function.
+o Use numpy and scipy to compare your solution.
+o Benchmark the speed of the three approaches for two dummy input lists of 1M elements.
+
+!split 
+==== Loss function, chategorization =====
+o Compute the entropy loss for two dummy input lists of 1M elements.
+
+
+

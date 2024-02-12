@@ -1,11 +1,10 @@
 import sys, re, os, shutil, glob
 
-chapters = "intro import pandas".split()
 chaptersdir = 'modules'
 
 ignored_files = '*.o *.so *.a *.pyc *.bak *.swp *~ .*~ *.old tmp* temp* .#* \\#* *.log *.dvi *.aux *.blg *.idx *.nav *.out *.toc *.snm *.vrb *.cproject *.project .DS_Store Trash'.split()
 
-def chapter_visitor(action=None, chapters=chapters):
+def chapter_visitor(action=None):
     """Visit dirs in chapters and call/perform action."""
     if isinstance(action, str):
         action = re.split('r\s*;\s*', action)
@@ -16,14 +15,14 @@ def chapter_visitor(action=None, chapters=chapters):
                 print (command)
                 failure = os.system(command)
                 if failure:
-                    print ('failure in execution...'); sys.exit(1)
+                    print ('Some failure in execution...'); sys.exit(1)
     elif callable(action):
         action_function = action
 
-#    prefix = os.path.join(os.pardir, chaptersdir)
     prefix = chaptersdir
     thisdir = os.getcwd()
-    for chapter in chapters:
+
+    for chapter in [x[0] for x in os.walk(thisdir)]:
         destination = os.path.join(prefix, chapter)
         if os.path.isdir(destination):
             print ('visiting directory', destination)
@@ -56,10 +55,10 @@ def compile_chapters():
     """
     chapter_visitor('rm -rf tmp*; bash -x make.sh')
 
-def make_links(chapters=chapters):
+def make_links():
     """Make links to all src-* and fig-* dirs for all chapters."""
     prefix = os.path.join(os.pardir, chaptersdir)
-    for chapter in chapters:
+    for chapter in [x[0] for x in os.walk(prefix)]:
         destination = os.path.join(prefix, chapter)
         subdirs = [tp + '-' + chapter for tp in ['fig', 'src', 'mov', 'exer']]
         for subdir in subdirs:
@@ -76,7 +75,7 @@ def spellcheck():
     """Visit each individual chapter and spellcheck all *.do.txt in it."""
     chapter_visitor('rm -rf tmp*; doconce spellcheck -d .dict4spell.txt *.do.txt')
 
-def pack_src(root='src', tarfile='book-examples.tar.gz', chapters=chapters):
+def pack_src(root='src', tarfile='book-examples.tar.gz'):
     """
     Publish programs, libraries, data, etc. from the book.
     Method: make new directory tree root, copy all src-name dirs
@@ -89,7 +88,7 @@ def pack_src(root='src', tarfile='book-examples.tar.gz', chapters=chapters):
     os.chdir(root)
     prefix = os.path.join(os.pardir, os.pardir, chaptersdir)
     thisdir = os.getcwd()
-    for chapter in chapters:
+    for chapter in [x[0] for x in os.walk(prefix)]:
         src = 'src-' + chapter
         # Clean up redundant files that we will not publish
         destination = os.path.join(prefix, src)
@@ -112,9 +111,8 @@ def externaldocuments():
     prefix = os.path.join(os.pardir, chaptersdir)
     #dirs = [name for name in os.listdir(prefix)
     #        if os.path.isdir(os.path.join(prefix, name))]
-    dirs = chapters[:]
     docs = []
-    for nickname in dirs:
+    for nickname in [x[0] for x in os.walk(prefix)]:
         mainfiles = glob.glob(os.path.join(prefix, nickname, 'main_*.do.txt'))
         for mainfile in mainfiles:
             docs.append((nickname, mainfile[:-7]))  # drop .do.txt

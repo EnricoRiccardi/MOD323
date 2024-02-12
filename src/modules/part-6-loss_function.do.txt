@@ -1,0 +1,59 @@
+!split
+======= Loss function =======
+One of the main core concept behind machine learnign is the _loss function_.
+
+In mathematical optimization and decision theory, a loss function or cost function (sometimes also called an error function) is a function that maps an event or values of one or more variables onto a real number intuitively representing some "cost" associated with the event. [Wiki]
+
+!bblock Loss function in Machine Learning
+It quantifies the difference between the predicted outputs of a machine learning algorithm and the actual target values.
+!eblock
+
+
+!split
+===== Loss function aims =====
+
+It porovides a set of core quantifications/possibilities:
+
+!bpop
+o Performance measurement: it provides the metric of the prediction performances
+
+o Direction for improvement: it allows the identification of convergent solutions
+ 
+o Balancing bias and variance: it allows to account for artifact in the sampling phase
+
+o Influencing model behavior: it allows to bridge data driven methods with mathematics/physics
+!epop
+
+
+!split 
+===== Most common loss function in machine learning =====
+
+o Mean Square Error (regression): Fast computations, good convergence.
+
+o Mean Absolute Error (regression): No focus on the outliers, poor convergence.
+
+o Entropy Loss (classification): 
+
+o Log loss (classification)
+
+
+!split
+===== MSE ini Vanilla Python =====
+
+@@@CODE ../code/mse_vanilla.py
+
+!split
+===== MSE in Numpy Python =====
+
+@@@CODE ../code/mse_numpy.py
+
+!split
+===== MSE in Python =====
+
+@@@CODE ../code/mse.py
+
+!split
+===== MSE in benchmark =====
+
+@@@CODE ../code/mse_scaling.py
+
