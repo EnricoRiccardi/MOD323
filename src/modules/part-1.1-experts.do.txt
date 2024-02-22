@@ -8,10 +8,11 @@ As a parallel, if you are sick, you need to contact the right person. Contacting
 most likely result in a waste of time, your and her/his. Yet surgeons are between
 the most competent people in medicine.
 
-!Split
+!split
 ===== Who does what =====
 Different disciplines and thus actors can be involved:
 
+!bpop
 * Data Scientists: They specialise in analysing and interpreting complex datasets using a variety of techniques, including machine learning.
 Data scientists can help you understand whether your problem can be addressed through data analysis and machine learning, and they can develop models to solve it.
 
@@ -24,6 +25,14 @@ consulting with AI researchers or specialists in the specific field of AI that r
 * Computer Scientists/Software Engineers with ML Experience: Some software engineers or computer scientists,
 though not exclusively focused on machine learning, might have significant experience in applying ML techniques to practical problems.
 
+!epop
+
+
+!split
+===== Who does what =====
+Different disciplines and thus actors can be involved (continue):
+
+!bpop
 * Industry-Specific Experts with ML Background: Depending on your problem, experts in a particular industry who have experience with machine learning can provide valuable insights.
 For example, for a healthcare-related problem, a bioinformatician or medical informatics professional with machine learning experience could be ideal.
 
@@ -31,7 +40,7 @@ For example, for a healthcare-related problem, a bioinformatician or medical inf
 They can offer a *team* of experts to work on your problem.
 
 * Academic Institutions: Universities and research institutions often have departments or labs dedicated to machine learning and AI research.
-Collaborating with an academic partner can provide access to cutting-edge research and highly specialised expertise.
+!epop
 
 
 !split
@@ -92,4 +101,21 @@ different ethical concerns.
 ===== Garbage in, Garbage out =====
 This is one of the fundamental baselines of ML. It doesn't matter what approach one uses. If data are garbage, model prediction will be garbage.
 Collecting data hoping that something will come out is often the perfect recipe for disasters.
+
+!split
+===== No free lunch theorem =====
+!bblock
+The theorem states that all optimization algorithms perform equally well when their performance is averaged across all possible problems.
+!eblock
+
+\pause
+
+* The performance of all optimization algorithms are identical, under some specific constraints.
+* There is provably no single best optimization algorithm or machine learning algorithm.
+
+\pause
+
+!bblock
+If one algorithm performs better than another algorithm on one class of problems, then it will perform worse on another class of problems
+!eblock
 

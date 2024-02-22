@@ -1,9 +1,9 @@
 !split
 ===== What ML can do in GEO? =====
+As discussed, Machine learning can be used in a large set of fields. In particular, in geo-applications one can:
 
 !bpop
-o Handle too large dataset
-o Handle dataset with too many dimensions
+o Handle (too) large dataset
 o Automate long repetitive and low value tasks
 o Support decision making
 o Implement expert assesment
@@ -24,9 +24,9 @@ o Feature detection/guided interpretation.
 Significance? Labeling strategy? Correlated data? Statistical interactions?
 !epop 
 
-!spilt
+!split
 ===== General Work Flow =====
-Also in geo applications, a predominant quantity of time/effort shall be dedicated to data retrival, preparation, interpretation.
+Also in geo applications, a predominant quantity of time or efforts shall be dedicated to data retrival, preparation, interpretation.
 
 !bpop
 o Data preparation
@@ -72,7 +72,7 @@ As every black box, they are not fully reliable.
 Here some guide:
 !bpop
 o Use the simplest approach! 
-o Consider approach quality! 
+o Consider approach quality
 o Compare your results with benchmarks.
 o Avoid not reporducible studies.
 o Prioritize intepretability above computational speed and accuracy.

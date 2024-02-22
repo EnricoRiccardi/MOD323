@@ -28,32 +28,63 @@ o Influencing model behavior: it allows to bridge data driven methods with mathe
 !split 
 ===== Most common loss function in machine learning =====
 
+Most popular entries:
+!bpop
 o Mean Square Error (regression): Fast computations, good convergence.
 
 o Mean Absolute Error (regression): No focus on the outliers, poor convergence.
 
-o Entropy Loss (classification): 
+o Entropy Loss (classification): measures the difference between the model probability distribution outcomes and the predicted values
 
-o Log loss (classification)
+!epop
+
+!split
+===== MSE in Vanilla Python =====
+
+!bblock
+@@@CODE ../code/mse_vanilla.py fromto: def mean@# Loop
+!eblock
 
 
 !split
-===== MSE ini Vanilla Python =====
+===== MSE in Vanilla Python =====
 
-@@@CODE ../code/mse_vanilla.py
+!bblock
+@@@CODE ../code/mse_vanilla.py fromto:sum_squared_error@return
+!eblock
+
 
 !split
 ===== MSE in Numpy Python =====
-
+!bblock
 @@@CODE ../code/mse_numpy.py
+!eblock
 
 !split
 ===== MSE in Python =====
-
+!bblock
 @@@CODE ../code/mse.py
+!eblock
 
 !split
 ===== MSE in benchmark =====
-
+!bblock
 @@@CODE ../code/mse_scaling.py
+!eblock
+
+!split
+===== Coding MSE =====
+!bblock
+@@@CODE ../code/mse_scaling_2.py
+!eblock
+
+!split
+===== Coding MSE =====
+!bblock
+@@@CODE ../code/mse_scaling_3.py
+!eblock
+
+
+
+
 
