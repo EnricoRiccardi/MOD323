@@ -1,0 +1,268 @@
+!split
+======= Classification types =======
+
+There are two main types of classification methods for analysis of a set
+of objects stored in matrix *X*:
+
+
+!bslidecell 00
+\pause
+!bblock Unsupervised classification
+* Only the *X* data is used
+* "Natural" classes/clusters/groupings in *X* are discovered 
+!eblock
+!eslidecell
+
+!bslidecell 01
+\pause
+!bblock Supervised classification
+* We know the class/group/cluster membership of every object/sample
+* Class information is stored in an *Y* matrix
+!eblock
+!eslidecell
+
+!split
+===== Classification types =====
+Several approaches can be found in classification tasks:
+
+!bslidecell 00
+\pause
+!bblock Unsupervised classification
+* Principal component analysis (PCA)
+* Agglomerative (hierarchical) cluster analysis.
+* k-means cluster analysis
+* Fuzzy c-means cluster analysis 
+* Self organising feature maps (SOFM)
+!eblock
+!eslidecell 
+
+!bslidecell 01
+\pause
+!bblock Supervised classification
+* Linear discriminant analysis (LDA)
+* k-nearest neighbours (kNN)
+* Discriminant partial least squares
+* Soft independent modelling of class analogies (SIMCA)
+* Support vector machine (SVM)
+!eblock
+!eslidecell
+
+
+!split 
+===== Limitations of unsupervised classification =====
+
+* Do "natural" clusters in a data set exist and/or have any meaning?
+
+* First we must have a definition of what is a cluster. To do this we
+must define what we mean by \alert{similar} or \alert{dissimilar} objects.
+
+* Objects that are \alert{close} have low dissimilarity and high similarity.
+
+\pause 
+
+!bblock
+A metric system is required.
+!eblock
+
+!split
+===== Proximity: Continuous variables ===== 
+
+!bblock Triangle inequality
+
+Considering a vectors in an N-dimensional space, to be a \alert{distance} it must satisfy the \alert{triangle inequality}:
+
+!eblock
+
+!bt
+\begin{displaymath}
+d_{ij} + d_{im} \geq d_{jm}
+\end{displaymath}
+!et
+
+If also $d_{jj}=0$, if $i=j$ and $d_{jj}-d_{ii}=0$, then we call it a {\em metric}.
+ 
+FIGURE: [../figures/triangleineq.eps, frac=0.3]
+
+
+!split
+===== Proximity: Continuous measures =====
+
+!bblock Common metrics:
+* Euclidean. 
+
+!bt
+\begin{displaymath}
+d_{ij}^{(E)} = \left[ \sum_{k=1}^{N} (x_{ik} - x_{jk})^2 \right]^{\frac{1}{2}}
+\end{displaymath}
+!et
+
+* Manhattan
+!bt
+\begin{displaymath}
+d_{ij}^{(M)} = \sum_{k=1}^{N} \|x_{ik} - x_{jk} \|
+\end{displaymath}
+!et
+
+* Minkowski
+!bt
+\begin{displaymath}
+d_{ij}^{(M(p))} = \left[ \sum_{k=1}^{N} (x_{ik} - x_{jk})^p \right]^{\frac{1}{p}}
+\end{displaymath}
+!et
+!eblock
+
+
+!split
+===== Proximity: Categorical variables =====
+
+* Many applications consist of binary vectors, typical is "yes"
+  and "no" answers to a lot of tests
+* It is tempting to use distance between binary vectors to signify
+  distance. However that is *by far* not optimal. 
+
+\pause 
+
+Lets look at an example:
+
+* $ \textbf{v}_1 = [1~1~0~0~0~0]$
+* $ \textbf{v}_2 = [0~0~1~1~0~0]$
+* $ \textbf{v}_3 = [1~1~1~1~1~1]$
+
+It makes NO SENSE to compute the Euclidean distances between these vectors
+
+
+!split
+===== Proximity: Categorical variables: Binary matching =====
+
+!bt
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|c|c|c|}  \hline \hline
+                       & {\em Object B} value 1 & {\em Object B}  value 0  \\ \hline
+{\em Object A} value 1 &      a                 &       b      \\ \hline
+{\em Object A} value 0 &      c                 &       d      \\ \hline \hline
+\end{tabular}
+\end{center}
+\end{table}
+!et
+ 
+
+!bblock Example
+
+!bslidecell 00
+!bt
+\begin{eqnarray*}
+\textbf{a} = \left[0~0~0~1\right]  \\ \nonumber
+\textbf{b} = \left[1~1~0~1\right]  \\ \nonumber
+\end{eqnarray*}
+!et
+!eslidecell 
+
+!bslidecell 01
+* $c=2$: two places where A has 0 and B has 1.
+* $d=1$: one place where A and B are equal to 0.
+* $a=1$: one place where A and B are equal to 1.
+!eslidecell 
+!eblock
+
+
+
+
+!split
+======= Agglomerative algorithms =======
+
+Agglomerative cluster analysis "clumps" objects together according
+to a definition of similarity or dissimilarity. The objects are merged
+progressively into larger clusters until only one cluster remains
+which consists of all the objects in the data set
+
+This can be summarised in a \alert{hierarchical cluster tree}.
+
+\pause
+ 
+FIGURE: [../figures/small_tree.eps, frac=0.7]
+
+
+
+
+!split
+===== Clumping objects =====
+One of the simpliest iterative approaches for unsupervised clustering is:
+
+n\_clusters = n\_datapoints
+
+o WHILE no. clusters $>$ 1
+o Find smallest \alert{distance} between clusters A and B
+o Merge clusters A and B
+o Define a new cluster (AB)
+o \alert{Distance} matrix between all clusters
+o ENDWHILE
+
+
+
+!split
+======= k-means cluster analysis =======
+With the raise of Machine Learning, one of the most popular approach is k-means.
+
+The algorithm consists of:
+
+o Select the number of clusters $K\leq K_{max}$ to look for
+
+o Start by creating $K$  random cluster centres $\textbf{m}_k$
+
+o For each object $\textbf{x}_j$ assign it to the cluster center it
+  is nearest to
+
+o Re-compute center points $\textbf{m}_k$ for the new clusters and
+  re-iterate towards convergence
+
+
+!bblock
+This procedure minimises the within-cluster variance
+!eblock
+
+
+!split
+===== Optimal no of clusters =====
+
+ In k-means cluster analysis we assume a _true_ number of clusters.
+
+ To estimate the optimal no. of clusters $K^*$ from data we
+ may do as follows:
+
+o Compute k means for $K \in [1,2, \cdots , K_{max}]$
+o Compute the mean \alert{within cluster variance} $W_K$ for each selection of
+  $K \in [1,K_{max}]$
+o The variances $[W_1,W_2,\cdots ,W_{max}]$ generally decrease
+  with increasing $K$. This will even be the case for an independent
+  test set such that cross-validation cannot be used.
+
+
+
+!split
+===== Optimal no of clusters =====
+
+o Intuitively, when $K < K^*$ we expect that an additional
+  cluster will lower the within cluster variance: $W_{K+1} \ll W_K$.
+o When $K > K^*$ the decrease of the variance will be less evident.
+
+!bblock Optimal $n\_clusters$
+This means there will be flattening of the $W_j$ curve. A sharp drop
+in the variance may be used to identify the optimal no. of clusters.
+!eblock
+
+!split
+===== Optimal no of clusters, example =====
+
+FIGURE: [../figures/q_CLUST_1_1p1.eps, frac=0.8]
+
+
+!split
+===== Optimal no of clusters, example =====
+
+FIGURE: [../figures/q_CLUST_1_2p1.eps, frac=0.8]
+
+Each curve is for a dataset with a different distance between clusters.
+
+
+

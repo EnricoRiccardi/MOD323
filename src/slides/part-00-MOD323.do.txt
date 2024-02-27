@@ -1,0 +1,8 @@
+TITLE:  Applied statistics and Machine learning in Python with subsurface applications
+AUTHOR: Enrico Riccardi, University of Stavanger
+DATE: today
+
+FIGURE: [../figures/logo, width=100 frac=0.2]
+
+
+# #include "../modules/part-0-intro.do.txt"

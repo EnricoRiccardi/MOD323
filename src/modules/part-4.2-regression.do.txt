@@ -1,0 +1,614 @@
+!split
+======= Linear Regression =======
+
+!split
+===== A _linear model_ =====
+
+Considering a univariate case, we have:
+!bpop
+!bt
+\begin{displaymath}
+q = f(x)
+\end{displaymath}
+!et
+
+which relates the _independent variable_ $x$ to the _true dependent variable_ $q$.
+!epop
+
+\vspace{1em}
+
+!bpop
+
+!bblock
+_Assuming_ a linear model
+!eblock
+
+!bt
+\begin{displaymath}
+q = \beta_0 + \beta_1 x
+\end{displaymath}
+!et
+
+where $\beta_i$ are the arbitrary selected coefficients.
+!epop
+
+
+!split
+===== Model set-up =====
+
+For a given $x$ we do not
+know the true response $q$, only the measurementa $y_i$ for
+experiment $i$. 
+
+!bpop
+We have that:
+
+!bt
+\begin{displaymath}
+y_i = q_i + \epsilon_i
+\end{displaymath}
+!et
+
+!epop
+
+!bblock
+NOTE: do not proceed if you do not fully understand this equation.
+!eblock
+
+!bpop
+
+which is
+!bt
+\begin{displaymath}
+y_i =  \beta_0 + \beta_1 x_i + \epsilon_i
+\end{displaymath}
+!et
+
+!epop
+!bpop
+
+!bblock Discussion point
+Does $\epsilon_i$ matter? And why so?
+!eblock
+
+!epop
+
+
+!split
+===== Estimated model paramters =====
+The model parameters $\beta_0,\beta_1$ are unknown, but they can be
+_estimated_. To distinguish estimates from true model parameters
+we call them $b_0,b_1$. These estimates are calculated such that the
+model
+
+!bt
+\begin{displaymath}
+\hat{y} = b_0 + b_1 x
+\end{displaymath}
+!et
+
+fits the $n$ different experimental observations as well as
+possible. 
+
+
+!split
+===== Linear model example =====
+
+\vspace{1em}
+
+We would like to find the TRUTH (What it it?)
+
+\vspace{-1em}
+
+FIGURE: [../figures/d1_3_1, frac=0.8]
+
+!split
+===== Python Example =====
+
+!bblock
+
+@@@CODE ../code/linear_data_truth.py 
+
+!eblock
+
+
+!split
+===== Linear model(s) =====
+Does a linear model mean only straight lines (or hyperplanes
+in general)?
+
+!bpop
+
+That answer to this is *no*. 
+#As we shall see, polynomial regressionis still linear. 
+#_Non-linear_ regression models means something
+different.  
+In general for a model $f$ to be defined linear, it has to be
+linear with respect to the unknown parameters
+$\beta_0,\cdots, \beta_n$. The general linear model is
+
+!epop
+
+!bpop
+!bt
+\begin{displaymath}
+q = \beta_0 + \beta_{1} f_1(x_1) + \beta_{2} f_2(x_2) + \cdots + \beta_{n}f_n(x_n)
+\label{general-linear}
+\end{displaymath}
+!et
+
+where $f_i(x_i)$ may be non-linear functions. It is the
+_form_ of the equation which makes it linear, i.e. that
+$f_i(x_i)$ does not depend on the parameters $\beta_i$.
+
+!epop
+
+
+
+!split
+===== Estimation of linear regression parameters =====
+
+For the 1-dimensional problem, we have
+!bpop
+!bt
+\begin{displaymath}
+\hat{y} = b_0 + b_1 x
+\end{displaymath}
+!et
+!epop
+
+!bpop
+where $\hat{y}$ is the estimated y-value from the approximate model
+that has been generated from a set of measurements $(x_i,y_i)$. 
+We aim to find the $b_i$ parameters such that the regression line fits 
+the observed data as well as possible. 
+!epop
+
+!bpop
+This means we want to minimise the residuals
+
+!bt
+\begin{displaymath}
+e_i = y_i - \hat{y}_i
+\end{displaymath}
+!et
+!epop
+
+
+!bt
+\begin{displaymath}
+R = \sum_{i=1}^{n} e^2_i =  \sum_{i=1}^{n}(y_i -  \hat{y}_i)^2
+\end{displaymath}
+!et
+!epop
+
+!bpop
+!bblock How?
+Regression!
+!eblock
+
+!epop
+
+
+!split
+===== Let's recaps =====
+Before to continue, let's make sure to have all the main elements clear:
+
+!bpop
+o Splitting the data in dependent and independent variables
+o Assumption of a linear model between them
+o Recognise the difference between the truth and the estimation
+o Aiming to *minimize* the residuals 
+!epop
+!bpop
+
+!bblock Discussion
+What happen when the sun of residual is 0 ?
+!eblock
+!epop
+
+!bpop
+!bblock
+What happens where the data is heavily correlated? 
+!eblock
+!epop
+
+
+!split 
+===== Regression =====
+To minimize the sum of the square residuals, we can try to solve the following
+equations:
+!bpop
+!bt
+\begin{eqnarray*}
+\frac{\partial R}{\partial b_0} &=& 0\\
+\frac{\partial R}{\partial b_1} &=& 0\\
+\end{eqnarray*}
+!et
+!epop
+
+where:
+!bpop
+!bt
+
+\begin{eqnarray*}
+R = \sum_{i=1}^{n}(y_i -  \hat{y}_i)^2  &=& \\ \nonumber
+   \sum_{i=1}^{n}\left(y_i - (b_0 + b_1 x_i)\right)^2 = \sum_{i=1}^{n} u_i^2
+%\sum_{i=1}^{n}(y_i - 2b_0 y_i - 2b_1 x_i y_i + 2b_0b_1 x_i + b_0^2 + b_1^2 x_i^2) 
+\end{eqnarray*}
+!et
+!epop
+
+
+!split
+===== Regression =====
+Skipping the math (but you are more than welcome to try), here are the results:
+
+!bpop
+!bt
+\begin{eqnarray*}
+b_0  &=&  \bar{y} - b_1\bar{x}\\
+b_1 &=& \frac{\sum_{i=1}^{n}(x_i -  \bar{x})(y_i -  \bar{y})}{\sum_{i=1}^{n}(x_i -  \bar{x})^2}
+\end{eqnarray*}
+!et
+!epop
+
+!bpop
+!bt
+Straightforward derivation becomes very cumbersome for multiple
+variables. Thus, a different approach must be used.
+Yet, it is important to understand that there is an analytical solution (even if not all the time).
+!et
+!epop
+
+
+
+
+!split
+===== Residual =====
+!bslidecell 00
+
+!bt
+\begin{eqnarray*}
+R &=& \bm{e}^T\bm{e}\\ 
+&=& (\bm{y} - \hat{\bm{y}})^T(\bm{y} - \hat{\bm{y}})\\
+&=& (\bm{y} - \bm{X}\bm{b})^{T}(\bm{y} - \bm{X}\bm{b}) \\
+&=& (\bm{y}^{T} - \bm{b}^{T}\bm{X}^{T})(\bm{y} - \bm{X}\bm{b}) \\
+&=& \bm{y}^{T}\bm{y} - \bm{y}^{T}\bm{X}\bm{b} - \bm{b}^{T}\bm{X}^{T}\bm{y} \\
+&+& \bm{b}^{T}\bm{X}^{T}\bm{X}\bm{b}
+\end{eqnarray*}
+!et
+
+!eslidecell
+!bslidecell 01
+All the parts of this equation are scalar values. This means e.g. that
+
+!bt
+\begin{displaymath}
+\bm{y}^{T}\bm{X}\bm{b} = \bm{b}^{T}\bm{X}^{T}\bm{y}
+\end{displaymath}
+!et
+
+This gives
+
+!bt
+\begin{displaymath}
+R= \bm{y}^{T}\bm{y} - 2 \bm{y}^{T}\bm{X}\bm{b} + \bm{b}^{T}\bm{X}^{T}\bm{X}\bm{b}
+\end{displaymath}
+!et
+!eslidecell
+
+
+
+
+
+
+!split 
+===== General solution =====
+We have from above:
+
+!bt
+\begin{eqnarray*}
+R &=& \bm{y}^{T}\bm{y} - 2\bm{y}^{T}\bm{X}\bm{b} \\
+            &+& \bm{b}^{T}\bm{X}^{T}\bm{X}\bm{b}
+\end{eqnarray*}
+!et
+Vector differentiation gives
+
+!bt
+\begin{displaymath}
+\frac{\partial R}{\partial \bm{b}} =  0 - 2 \bm{X}^{T}\bm{y} + 2\bm{X}^{T}\bm{X}\bm{b} =0
+\end{displaymath}
+!et
+
+Solving this for $\bm{b}$ we get:
+
+!bt
+\begin{eqnarray*}
+\bm{X}^{T}\bm{X}\bm{b} &=& \bm{X}^{T}\bm{y} \\
+(\bm{X}^{T}\bm{X})^{-1}\bm{X}^{T}\bm{X}\bm{b} &=&(\bm{X}^{T}\bm{X})^{-1}\bm{X}^{T}\bm{y}\\
+\bm{b} &=&(\bm{X}^{T}\bm{X})^{-1}\bm{X}^{T}\bm{y}
+\end{eqnarray*}
+!et
+
+
+!split
+===== Multiple linear regression =====
+
+Previous equation make the solution of MLR rather obvious!
+
+When we have a matrix of y-variables _Y_:
+
+!bt
+\begin{displaymath}
+\bm{B} =  (\bm{X}^{T}\bm{X})^{-1}\bm{X}^{T}\bm{Y}
+\end{displaymath}
+!et
+
+!bpop
+in the equation:
+
+!bt
+\begin{displaymath}
+\bm{Y} = \bm{X} \bm{B}.
+\end{displaymath}
+!et
+
+These equations give us the _multiple linear regression_ (MLR)
+solution.
+!epop
+
+!split
+======= Loss function =======
+One of the main core concepts behind machine learning is the _loss function_.
+
+
+In mathematical optimization and decision theory, a loss function or cost function (sometimes also called an error function) is a function that maps an event or values of one or more variables onto a real number intuitively representing some "cost" associated with the event. [Wiki]
+
+
+\pause
+
+
+!bblock Loss function in Machine Learning
+It quantifies the difference between the predicted outputs of a machine learning algorithm and the actual target values.
+!eblock
+
+
+
+
+!split
+===== Loss function aims =====
+
+
+It provides a set of core quantifications/possibilities:
+
+
+!bpop
+o Performance measurement: it provides the metric of the prediction performances
+
+
+o Direction for improvement: it allows the identification of convergent solutions
+
+
+o Balancing bias and variance: it allows to account for artefact in the sampling phase
+
+
+o Influencing model behaviour: it allows to bridge data driven methods with mathematics/physics
+!epop
+
+
+
+
+!split
+===== Most common loss function in machine learning =====
+
+
+Most popular entries:
+!bpop
+o Mean Square Error (regression): Fast computations, good convergence.
+
+
+o Mean Absolute Error (regression): No focus on the outliers, poor convergence.
+
+
+o Entropy Loss (classification): measures the difference between the model probability distribution outcomes and the predicted values
+
+
+!epop
+
+
+!split
+===== Losses =====
+
+
+!bblock Mean absolute error, L1 loss
+!bt
+\[
+MAE = \frac{1}{n} \sum_{i=1}^n (|y_i -\bar y|)
+\]
+!et
+!eblock
+
+
+\space
+
+
+!bblock Mean square error, L2 loss
+!bt
+\[
+MSE = \frac{1}{n} \sum_{i=1}^n (y_i -\bar y)^2
+\]
+!et
+!eblock
+
+
+!bblock Log Loss for binary classification
+!bt
+\[
+Log\_Loss = -[y \ log(f(x)) + (1-y) log(1-f(x))]
+\]
+!et
+!eblock
+
+
+
+
+!split
+===== MSE in Vanilla Python =====
+
+
+!bblock
+@@@CODE ../code/mse_vanilla.py fromto: def mean@# Loop
+!eblock
+
+
+
+
+!split
+===== MSE in Vanilla Python =====
+
+
+!bblock
+@@@CODE ../code/mse_vanilla.py fromto:sum_squared_error@
+!eblock
+
+
+
+
+!split
+===== MSE in Numpy Python =====
+!bblock
+@@@CODE ../code/mse_numpy.py
+!eblock
+
+
+!split
+===== MSE in Python =====
+!bblock
+@@@CODE ../code/mse.py
+!eblock
+
+
+!split
+===== MSE in benchmark =====
+!bblock
+@@@CODE ../code/mse_scaling.py
+!eblock
+
+
+!split
+===== Coding MSE =====
+!bblock
+@@@CODE ../code/mse_scaling_2.py
+!eblock
+
+
+!split
+===== Coding MSE =====
+!bblock
+@@@CODE ../code/mse_scaling_3.py
+!eblock
+
+
+
+
+!split
+======= Regularization =======
+
+
+Conventionally, MSE is used as loss function:
+
+
+!bblock
+!bt
+\[
+MSE = \frac{1}{n} \sum_{i=1}^n (y_i -\bar y)^2
+\]
+!et
+!eblock
+
+
+We might want to force our model not not fit so well the data,
+i.e. we *penalise* the model.
+
+
+!bt
+\[
+L1\_loss\_regularized = MSE + \lambda \sum_{i=1}^m |b_i|
+\]
+
+\[
+L2\_loss\_regularized = MSE + \lambda \sum_{i=1}^m b_i^2
+\]
+
+\[
+Elastic \ Net = MSE + \lambda_1 \sum_{i=1}^m |b_i| + \lambda_2 \sum_{i=1}^m b_i^2
+\]
+!et
+
+
+
+!split
+===== Norms =====
+FIGURE: [../figures/norm, width=100 frac=1.0]
+
+
+!split
+===== Outcomes =====
+FIGURE: [../figures/n65, width=100 frac=1.0]
+
+
+
+
+!split
+===== Regularization =====
+$\lambda$ is the regularisation strength. The larger value it has, the more the
+target function is "wrong". For $\lambda=0$, no regularisation is imposed.
+
+
+\pause
+
+
+Forcing a model to be "wrong" might sound rather counter-intuitive.
+Furthermore, we have introduced one more parameter that has not much meaning?!
+
+
+\pause
+!bblock Bias - variance trade off
+!bt
+\[
+Error = bias^2 + variance + statistical \ error
+\]
+!et
+!eblock
+
+
+!split
+===== Bias =====
+Bias is the difference of the average value of predictions ($q$) from the true relationship function ($f$):
+
+
+!bt
+\[
+bias[q(x)] = \mathbb{E}[q(x)] - f(x)
+\]
+!et
+
+
+Variances is the expectation of the squared deviation of q(x) from its expected value $\mathbb{E}[q(x)]$.
+!bt
+\[
+var[q(x)] = \mathbb{E}[(q(x) - \mathbb{E}[q(x))^2]
+\]
+!et
+
+
+!split
+===== Bias-Variance =====
+FIGURE: [../figures/bias_variance, width=200 frac=1.0]
+
+
+!split
+===== Bias-Variance =====
+FIGURE: [../figures/bias_variance_2, width=100 frac=1.0]
+  
