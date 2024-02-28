@@ -1,0 +1,86 @@
+
+!split
+======= Gaussian Mixture Model (GMM) =======
+
+Gaussian Mixture is a probabilistic model that tries to split the data into clusters.
+
+Each cluster is rapresented by a center (its mean) and a Gaussian distribution around it with different variance for the different dimensions.
+
+To each datapoint, a belonging probability to each cluster is assigned. 
+
+
+
+\pause 
+
+!bblock Assumption
+Data points are generated from a mixture of a finite number of Gaussian distributions with unknown parameters.
+!eblock
+
+
+!split
+===== Limitations =====
+
+The method is rather powerful, but it has quite significant drawbacks:
+
+!bpop
+* The method can be rather unstable and not converge for 'poor' data.
+
+* Iterative procedure is usually needed and convergence dependend on initial guest.
+
+* Interpretability of the results might be rather poor.
+
+* High dimensionality limitations.
+
+* Computationaly expensive
+!epop
+
+
+!split
+===== GMM usage example =====
+
+GMM is used in a large span of fields:
+
+!bpop
+* Clustering: GMMs can identify clusters with different shapes and sizes due to their probabilistic nature, making them suitable for more complex datasets.
+
+* Density Estimation: GMMs can model the probability distribution of a dataset
+
+* Anomaly Detection: By modeling the normal behavior of data through its distribution, GMMs can be used to detect outliers or anomalous events.
+
+* Image Segmentation: In computer vision, GMMs can be used for image segmentation, where the goal is to partition an image into segments based on the colors or textures.
+
+* Speech Recognition: GMMs have been used in speech recognition systems to model the distribution of audio features.
+
+* Pattern Classification: GMMs can serve as a soft-clustering method, providing probabilistic class memberships for data points, allowing the identification of pattern classification tasks where an instance may belong to multiple classes with different probabilities.
+
+* Financial Market Analysis: In finance, GMMs can be used to model the behavior of asset returns or to identify different regimes in financial markets.
+
+* Bioinformatics: GMMs are used in bioinformatics for tasks such as modeling gene expression data or protein structure. They can help in identifying biological patterns or clusters within the data that are not immediately apparent.
+
+* Astronomy: GMMs are used in astronomy to classify celestial objects and to estimate the distribution of stars or galaxies based on their properties, such as brightness and color.
+!epop
+
+
+!split
+===== GMM model development =====
+
+!bt
+\begin{displaymath}
+p(x) = \sum^K_{k=1} w_k f_k(x, \theta_k)
+\end{displaymath}
+!et
+
+where
+* $p(x)$ is the overall density or mass function of the mixture model.
+* $K$ is the number of distibutions to be considered
+* $g_k(x,\theta_k)$ is the density mass function of the k-th component 
+* $\theta_k$ are the parameters for the $g_k()$ distribution
+
+and where a Gaussian is:
+
+!bt
+\begin{displaymath}
+g(x) = \frac{1}{\sigma \sqrt(2 \pi)} exp ( - \frac{1}{2} \frac{(x-\mu)^2}{\sigma^2})
+\end{displaymath}
+!et
+
