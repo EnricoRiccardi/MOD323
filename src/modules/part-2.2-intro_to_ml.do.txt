@@ -52,7 +52,7 @@ FIGURE: [../figures/regression, frac=1]
 
 
 !split
-===== The data decides =====
+===== Is the data to decide? =====
 This is why we focus so much on the data type.
 
 !bblock
@@ -69,6 +69,8 @@ The numerical recipe that we used to generate the data is defined the _truth_
 !bblock Psychology or data science?
 Most Machine learning tools are aimed to find the truth. In most cases, we are happy to not find lies.
 !eblock
+
+It is much easier to start from a model (hyphothesis) and collect the data accordingly than the other way around.
 
 !split
 ===== Unsupervised learning =====
@@ -103,15 +105,33 @@ The right result is quite undefined,
 Uncertain goal.
 !eblock
 
-We will demonstrate it with a famous problem.
+Consider the famous ML digits challenge:
 
 !split
 ===== Uncertain goal =====
 FIGURE: [../figures/digits, frac=1]
 
 
+!split 
+===== Supervised learning =====
+Supervised learning, a term that implies external intervention (not sure if from a human anymore...), operates on the principle of identifying patterns and structures in datasets with labelled responses.
+
+!bblock Data and labels
+In a data matrix, one or more coloums are selected as labels (or target, or dependent variables)
+!eblock
+
+The task is to either operate a _regression_ or a _classification_
+
+!bblock Most common approaches
+* *Linear Regression*
+* *Logistic Regression*
+* *Support Vector Machines (SVM)*
+* *Neural Networks*
+!eblock 
+
+
 !split
-===== Wak supervised learning  =====
+===== Weak supervised learning  =====
 A less popular type of machine learning problem is when labels are assigned to groups of instances.
 
 The group of instances is called _bag_.
@@ -142,7 +162,6 @@ FIGURE: [../figures/sequencing, frac=0.7]
 
 
 
-
 !split
 ===== Reinforcement learning =====
 Finally, there is a further approach.
@@ -159,6 +178,6 @@ It learns from outcomes and decides which action to take next. After each action
 It is a  self-teaching system that essentially learns by trial and error.
 !eblock
 
-It is a dependable tool for automated decision making.
+It is a dependable tool for automated decision making. The model outcome is the identification of the best set of 'actions' (e.g. chess).
 
 

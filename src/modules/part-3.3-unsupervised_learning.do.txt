@@ -1,0 +1,71 @@
+!split
+===== Unsupervised learning =====
+Unsupervised learning, a term that resonates with the autonomy of machine intelligence, operates on the principle of identifying patterns and structures in datasets without labelled responses.
+
+This branch of machine learning is distinguished by its lack of explicit guidance, where algorithms are tasked with uncovering hidden structures from unlabeled data.
+
+\pause
+
+The most common clustering strategies are :
+* filtering
+* clustering
+* dimensionality reduction
+* association learning
+
+!split
+===== Application of unsupervised learning =====
+It is a bit of a holy grail: a computer that finds patterns without guidance.
+(Yes, it doesn't work, most of the time)
+
+
+\pause
+
+Still, it has been shown efficient for:
+
+* Computer vision
+* Anomaly detection
+* Exploratory data analysis
+
+!bblock Main challenge
+The right result is quite undefined,
+Uncertain goal.
+!eblock
+
+
+!split 
+===== Goals =====
+Finding a pattern in data does not mean to find something useful.
+
+!bblock
+Relevant is not the same as causal.
+!eblock
+
+\pause
+
+!bblock
+Correlation is not causation.
+!eblock
+
+\pause
+
+As we do not have a 'truth', or a supervision, we can look for data-patterns by 
+* grouping strategy according to some properties analogy
+* reducing variance within groups.
+
+!bblock
+Note: these approaches will (almost) always converge or provide information. Which is a better outcome, strategy or model parameter can be, at the end, only evaluated with domain expertise.
+!eblock
+
+!split
+===== Common approaches =====
+The number of unsupervised approach is tremendous, yet, the most common are the following:
+
+!bpop
+* k-means (rigid clustering)
+* Gaussian mixed model (soft clustering)
+* Hierarchical clustering (grouping into trees/dendrograms)
+* Principal component analysis (PCA) (Principal components identifications,)
+* Auto-encoders (data compression)
+!epop
+
+We will discuss a few of them.

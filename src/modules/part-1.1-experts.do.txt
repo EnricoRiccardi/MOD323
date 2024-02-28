@@ -111,7 +111,7 @@ The theorem states that all optimization algorithms perform equally well when th
 \pause
 
 * The performance of all optimization algorithms are identical, under some specific constraints.
-* There is provably no single best optimization algorithm or machine learning algorithm.
+* There is probably no single best optimization algorithm or machine learning algorithm.
 
 \pause
 

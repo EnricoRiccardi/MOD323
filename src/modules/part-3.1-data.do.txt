@@ -207,3 +207,22 @@ The experiments/observations/sample can be:
 * Rio delle Amazzoni
 * Sjoa
 * Atna
+
+
+!split
+===== Data into Machine Learning algorithms: normalisation =====
+
+Different measurements can lead to different data distribution and numerical values.
+
+When fed to numerical recipes, {data is just a set of numbers}.
+
+For faster computations, data can be _normalized_: i.e. rescaled to the same numerical interval.
+
+!bblock Normalisation
+The procedure simplifies the numerical recipes work, but it also loses information
+!eblock
+
+As it is not possible to complete sample any distribution, data might be disproportionately
+handled depending upon data collection (i.e. this can be an error source).
+
+

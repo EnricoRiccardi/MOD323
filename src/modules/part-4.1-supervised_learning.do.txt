@@ -1,0 +1,65 @@
+!split
+===== Supervised learning =====
+Supervised learning, a term that implies external intervention (not sure if from a human anymore...), operates on the principle of identifying patterns and structures in datasets with labelled responses.
+
+!bblock Data and labels
+In a data matrix, one or more columns are selected as labels (or target, or dependent variables)
+!eblock
+
+The task is to either operate a _regression_ or a _classification_
+
+!bblock Most common approaches
+* *Linear Regression*
+* *Logistic Regression*
+* *Support Vector Machines (SVM)*
+* *Neural Networks*
+!eblock
+
+
+!split
+===== Limitations =====
+
+Four main challenges shall be considered:
+
+!bblock Overfitting
+When a model learns the noise in the training data to the point that it negatively impacts the performance on new data. (Trash in trash out)
+!eblock
+
+\pause
+
+!bblock Underfitting
+When a model is too simple to learn the underlying structure of the data.
+!eblock
+
+\pause
+NOTE: in a learning phase, the risk of having overfitting is just stupid: costly and useless.
+
+\pause
+
+!bblock Data Quality
+The performance of supervised learning algorithms heavily depends on the quality and quantity of the data.
+!eblock
+
+!bblock Class Imbalance
+Occurs when classes in the data are not represented equally, which can lead to biassed models. When learning a model, noise is as important, if not more, than the model target.
+!eblock
+
+
+
+!split
+===== Goals =====
+
+!bblock Accuracy
+Increase the percentage of correct predictions.
+!eblock
+
+Depending upon if the model is aimed at a _regression_ or a _classification_, accuracy takes different meanings.
+
+\pause
+
+!bblock Generalisation
+Ensure the model performs well on new, unseen data.
+!eblock
+
+That is, instead, general. Once a model is trained, it is essentially a file (a list of coefficients) that can be copied indefinite times (scart and error-prone).
+
