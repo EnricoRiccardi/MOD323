@@ -174,20 +174,20 @@ e_i = y_i - \hat{y}_i
 !et
 !epop
 
+\pause
 
 !bt
 \begin{displaymath}
 R = \sum_{i=1}^{n} e^2_i =  \sum_{i=1}^{n}(y_i -  \hat{y}_i)^2
 \end{displaymath}
 !et
-!epop
 
-!bpop
+\pause
+
 !bblock How?
 Regression!
 !eblock
 
-!epop
 
 
 !split
