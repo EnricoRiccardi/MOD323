@@ -5,9 +5,9 @@ DATE: today
 FIGURE: [../figures/logo, width=100 frac=0.2]
 
 # #include "../modules/part-4.1-supervised_learning.do.txt"
-# #include "../modules/part-4.2-part-4.2-kNN.do.txt"
+# #include "../modules/part-4.2-kNN.do.txt"
 # #include "../modules/part-4.3-regression.do.txt"
-### #include "../modules/part-4.4-Neural_net.do.txt.TODO"
+# #include "../modules/part-4.4-Neural_net.do.txt"
 # #include "../modules/part-4.5-ML_model_evaluation.do.txt"
 # #include "../modules/part-4.6-regularization.do.txt"
 

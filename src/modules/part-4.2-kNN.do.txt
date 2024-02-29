@@ -1,78 +1,37 @@
 !split
-======= k-means clustering classification =======
+======= K-NN clustering classification =======
+ To initiatve k-NN (nearest neighbours), we can use first k-mean.
 
- The k-means clustering method is used for unsupervised
- classification, but can also be used for classification by providing
- prototype objects. The prototypes will be the cluster centers
- provided by the method. 
+ The k-means clustering method is used for unsupervised classification, and it can provide
+initial cluster centers. The approach requires to:
 
 !bpop
-* Assume we have a data set containing $K$ classes, with $N_j$
-  objects in each class
+* Assume the existance of $K$ classes, with $N_j$ objects in each class
 * Perform k-means clustering with $L_{k}$ clusters for each class
   data set giving $L_{k}$ cluster centers
-* The $L_{k}$ cluster centers for each class are \textbf{prototype objects}
-  which are used to perform a classification
-* When a new object is to be classified, we compute the distance
-  from this object to each of the $L_{k}$ cluster centers for each
-  class.
-* The closest objects are inspected and is given the class
-  membership corresponding to the class the prototype belongs to.
+* Use $L_{k}$ cluster centers to perform a classification
+* The closest objects are inspected and is given 
+  membership corresponding to the nearest cluster.
+* The centers are recomputed as average position of their members.
 !epop
-
-The method is simple and can be effective, however it has some
-problems with mislcassifications with objects positioned close to the
-class boundaries. 
-
-
-!split
-===== k-means clustering classification =====
-
-!bblock
-!bt
-\begin{algorithmic}[1]
-\FOR{$k = 1:K$}
-\item Apply k-means clustering to objects in class $k$ with
-  $L_{k}$ number of cluster centers
-\item Centers $\textbf{c}_{j}^{(k)}$are the prototype objects for class $k$.
-\FOR{$j = 1:L_{k}$}
-\item Assign class label $k$ for prototype $\textbf{c}_{j}^{(k)}$
-\ENDFOR
-\ENDFOR
-\item Let $\textbf{x}$ be unknown object to classify
-\FOR{$k = 1:K$}
-\FOR{$j = 1:L_{k}$}
- \item $d_{jk} = ||\textbf{c}_{j}^{(k)}-\textbf{x}||$
-\ENDFOR
-\ENDFOR
-\item Assign class $k$ to $\textbf{x}$ for the smallest distance $d_{jk}$
-\end{algorithmic}
-!et
-!eblock
 
 
 !split
 ===== k-nearest neighbor classification (k-NN) ===== 
 
 k-NN is an extension of just assigning the class label of the
-prototype closest to a new object. In k-NN the $k$ nearest
+centroids closest to a new object. In k-NN the $k$ nearest
 neighbors of the new object are used in the assignment process. 
 
 The algorithm for kNN can be formulated as follows:
 
 !bblock
-\begin{algorithmic}[1]
-\item Let $\textbf{x}$ be new object to classify
-\FOR{$i = 1:N$}
-\item $d_{i} = ||\textbf{X}_{i} - \textbf{x}||$
-\ENDFOR
-%\item The distances from new object to training data are calculated
-\item Find the $k$ nearest neighbors to $\textbf{x}$ by sorting $d_{i}$
-% \item Calculate the distribution of objects among the $k$-NN objects
-%   to $\textbf{x}$
-\item Use majority rule: Class to $\textbf{x}$ is equal to the most
-  frequent class among the $k$ neighbors.
-\end{algorithmic}
+* Let $\textbf{x}$ be new object to classify
+* FOOR{$i = 1:N$}
+  * $d_{i} = ||\textbf{X}_{i} - \textbf{x}||$
+* ENDFOR
+* Find the $k$ nearest neighbors to $\textbf{x}$ by sorting $d_{i}$
+* Use majority rule: Class to $\textbf{x}$ is equal to the most frequent class among the $k$ neighbors.
 !eblock
 
 
@@ -80,26 +39,26 @@ The algorithm for kNN can be formulated as follows:
 !split
 ===== k-nearest neighbor classification (k-NN) ===== 
 
-FIGURE: [../figures/kNN, frac=1]
+FIGURE: [../figures/kNN-1, frac=0.8 width=150]
 
 
 
 !split
 ===== k-nearest neighbor classification (k-NN) =====
 
+!bpop
 * kNN does not create a decision boundary model
-* The ``model'' consists of a set of objects with known class
+* The "model" consists of a set of objects with known class
   membership which are always used in the prediction
 * It is difficult to extract what are the important attributes for
   the classification
-* As no actual mathematical model is created it is difficult to
-  generalise the results. As shown before, a model forms a {\bf
-    compression} of the original data to make it more understandable
+* As no actual mathematical model is created, it is difficult to
+  generalise the results. 
 * kNN can be cumbersome to use because of having to keep the
   calibration set of object for every prediction. If very large
   feature vectors are used this could be computational/storage
   problem.
-
+!epop
 
 
 !split
@@ -107,12 +66,12 @@ FIGURE: [../figures/kNN, frac=1]
 
 The main advantages of the method are as follows:
 
+!bpop
 * Simple to understand
 * Simple to implement
 * Can handle complex decision boundaries. Rule of thumb: If k-NN
-  can't classify the objects, other methods most likely will also
-  fail.
-
+  can't classify the objects, other methods most likely will also fail.
+!epop
 
 
 !split
@@ -122,7 +81,8 @@ The results will be dependent on the $k$ parameter:
 
 !bslidecell 00
 FIGURE: [../figures/knn-ex1, frac=0.5]
-!eslidecell 
+!eslidecell
+ 
 !bslidecell 01
 FIGURE: [../figures/knn-ex2, frac=0.5]
 !eslidecell 

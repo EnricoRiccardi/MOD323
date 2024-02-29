@@ -1,0 +1,65 @@
+!split
+======= Advanced AI =======
+
+!bblock Multimodal AI
+An AI that processes and interprets multiple types of data inputs — such as text, images, audio, and video
+!eblock
+
+M-AI can make decisions or provide insights (it thus combine unsupervised, supervised and reinforcement learning).
+
+It uses an integrated set of different neural networks with different architectures each of which is designed to handle specific types of input data.
+
+\pause 
+Applications:
+* Autonomous Vehicles
+* Healthcare Diagnostics
+* Humanoids
+* Interactive machine
+* Augmented data
+
+
+!split
+===== Generative Adversarial Networks (GANs) =====
+
+!bblock Definition
+A class of machine learning frameworks where two neural networks contest with each other to generate new, synthetic instances of data that can pass for real data.
+!eblock
+
+\pause 
+In other words, a machine is able to teach from another.
+
+
+!split
+===== Something to worry =====
+
+!bblock Citation
+With great power comes great responsability (spiderman)
+!eblock
+
+\pause 
+
+Several advanced AI application can be really worrysome:
+
+!bpop
+* AI war-drone
+* votation frauds 
+* propaganda campains
+* job market chatastropy
+* energy and material demanding 
+!epop
+
+!split
+===== AI trends (2024) =====
+
+* Genrative AI
+* Augemented reality
+* Ethical and explanaible AI
+* Democratic AI
+* Sustainable AI
+
+
+!split
+===== AI potential (2024) =====
+
+FIGURE: [../figures/AI_potential, frac=1]
+

@@ -1,12 +1,14 @@
 !split
-===== Supervised learning =====
+======= Supervised learning =======
 Supervised learning, a term that implies external intervention (not sure if from a human anymore...), operates on the principle of identifying patterns and structures in datasets with labelled responses.
 
 !bblock Data and labels
 In a data matrix, one or more columns are selected as labels (or target, or dependent variables)
 !eblock
 
+\pause
 The task is to either operate a _regression_ or a _classification_
+\pause
 
 !bblock Most common approaches
 * *Linear Regression*
@@ -34,11 +36,16 @@ When a model is too simple to learn the underlying structure of the data.
 \pause
 NOTE: in a learning phase, the risk of having overfitting is just stupid: costly and useless.
 
-\pause
+
+
+!split
+===== Limitations =====
 
 !bblock Data Quality
 The performance of supervised learning algorithms heavily depends on the quality and quantity of the data.
 !eblock
+
+\pause
 
 !bblock Class Imbalance
 Occurs when classes in the data are not represented equally, which can lead to biassed models. When learning a model, noise is as important, if not more, than the model target.

@@ -24,6 +24,7 @@ preprocess -DFORMAT=pdflatex ../newcommands.p.tex > newcommands_keep.tex
 doconce format pdflatex $filename --latex_title_layout=beamer --latex_table_format=footnotesize --latex_admon_title_no_period --latex_code_style=pyg --no_ampersand_quote 
 doconce slides_beamer $filename --beamer_slide_theme=red_shadow
 pdflatex -shell-escape $filename
+pdflatex -shell-escape $filename
 mv ${filename}.pdf ${filename}-beamer.pdf
 
 # Handouts
