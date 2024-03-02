@@ -5,11 +5,11 @@
 An AI that processes and interprets multiple types of data inputs — such as text, images, audio, and video
 !eblock
 
-M-AI can make decisions or provide insights (it thus combine unsupervised, supervised and reinforcement learning).
+M-AI can make decisions or provide insights (it thus combines unsupervised, supervised and reinforcement learning).
 
 It uses an integrated set of different neural networks with different architectures each of which is designed to handle specific types of input data.
 
-\pause 
+\pause
 Applications:
 * Autonomous Vehicles
 * Healthcare Diagnostics
@@ -25,7 +25,7 @@ Applications:
 A class of machine learning frameworks where two neural networks contest with each other to generate new, synthetic instances of data that can pass for real data.
 !eblock
 
-\pause 
+\pause
 In other words, a machine is able to teach from another.
 
 
@@ -33,33 +33,36 @@ In other words, a machine is able to teach from another.
 ===== Something to worry =====
 
 !bblock Citation
-With great power comes great responsability (spiderman)
+With great power comes great responsibility (spiderman)
 !eblock
 
-\pause 
+\pause
 
-Several advanced AI application can be really worrysome:
+Several advanced AI application can be really worrisome:
 
 !bpop
 * AI war-drone
-* votation frauds 
-* propaganda campains
-* job market chatastropy
-* energy and material demanding 
+* votation frauds
+* propaganda campaigns
+* job market catastrophe
+* energy and material demanding
 !epop
 
 !split
 ===== AI trends (2024) =====
 
-* Genrative AI
-* Augemented reality
-* Ethical and explanaible AI
+* Generative AI
+* Augmented reality
+* Ethical and explainable AI
 * Democratic AI
 * Sustainable AI
-
+* Sentient AI ?!?
 
 !split
 ===== AI potential (2024) =====
 
-FIGURE: [../figures/AI_potential, frac=1]
+FIGURE: [../figures/AI_potential, frac=0.9]
+
+
+
 

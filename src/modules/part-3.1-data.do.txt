@@ -1,11 +1,7 @@
 !split
 ======= Data properties =======
 
-
-!split
-===== Data =====
-FIGURE: [../figures/data, frac=0.4]
-
+FIGURE: [../figures/data, frac=0.6]
 
 
 !split
@@ -60,50 +56,26 @@ previously introduced?
 
 
 !split
-===== Sampling point representation (SPR) =====
-
-!bpop
-* An intuitive way to represent curves and spectra is the _sampling point representation_.
-
-* We sample at regular intervals where each sample point is represented by a variable
-
-FIGURE: [../figures/SPR_example, width=90 frac=0.8]
-!epop
-
-
-!split
-===== Sampling point representation (SPR) =====
-!bpop
-* SPR is useful until point *i* in a curve has the same meaning of the point *i* in another curve.
-
-FIGURE: [../figures/SPR-shift-problem, frac=0.5]
-
-* Which parts of the profiles or shapes are comparable, i.e. have the same meaning?
-!epop
-
-!split
 ===== Data structures =====
 Given a representation, it is then needed to decide on a suitable _data structure_ for the problem.
 
-!bpop
 !bblock Definition
 A data structure is a way of storing
  and organising data in a computer so that it can be used effectively.
 !eblock
-!epop
-!bpop
+
+\pause 
 
 Typical data structures used in data analysis are:
-!epop
 !bpop
 
-  * Data points
+* Data points
 
-  * Arrays (vectors, matrices, N-mode (way) arrays)
+* Arrays (vectors, matrices, N-mode (way) arrays)
 
-  * Graphs (trees)
+* Graphs (trees)
 
-  * Databases
+* Databases
 !epop
 
 
@@ -162,12 +134,11 @@ The data matrix is an extremely common data structure.
 \end{displaymath}
 !et
 
+\pause 
 In python these can be saved as
-!bpop
 * lists (vanilla python)
 * numpy.arrays
 * pandas dataframes
-!epop
 
 !split
 ===== Nomenclature =====
@@ -194,14 +165,17 @@ Mathematically speaking, this is just a notation. As long as one keeps track and
 
 !split
 ===== A quick example =====
-Environmental measurements of rivers. The features (properties) can be:
+
+Environmental measurements of rivers. Features (properties):
 * pH
 * Temperature
 * Concentration of pollutants
 * Flow rate
 * water speed
+
 \pause
-The experiments/observations/sample can be:
+
+The instances/experiments/observations/sample:
 * Po
 * Danube
 * Rio delle Amazzoni

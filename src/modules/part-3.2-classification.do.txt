@@ -9,7 +9,7 @@ of objects stored in matrix *X*:
 \pause
 !bblock Unsupervised classification
 * Only the *X* data is used
-* "Natural" classes/clusters/groupings in *X* are discovered 
+* "Natural" classes/clusters/groupings in *X* are discovered
 !eblock
 !eslidecell
 
@@ -31,10 +31,10 @@ Several approaches can be found in classification tasks:
 * Principal component analysis (PCA)
 * Agglomerative (hierarchical) cluster analysis.
 * k-means cluster analysis
-* Fuzzy c-means cluster analysis 
+* Fuzzy c-means cluster analysis
 * Self organising feature maps (SOFM)
 !eblock
-!eslidecell 
+!eslidecell
 
 !bslidecell 01
 \pause
@@ -48,7 +48,7 @@ Several approaches can be found in classification tasks:
 !eslidecell
 
 
-!split 
+!split
 ===== Limitations of unsupervised classification =====
 
 * Do "natural" clusters in a data set exist and/or have any meaning?
@@ -58,14 +58,14 @@ must define what we mean by \alert{similar} or \alert{dissimilar} objects.
 
 * Objects that are \alert{close} have low dissimilarity and high similarity.
 
-\pause 
+\pause
 
 !bblock
 A metric system is required.
 !eblock
 
 !split
-===== Proximity: Continuous variables ===== 
+===== Proximity: Continuous variables =====
 
 !bblock Triangle inequality
 
@@ -80,7 +80,7 @@ d_{ij} + d_{im} \geq d_{jm}
 !et
 
 If also $d_{jj}=0$, if $i=j$ and $d_{jj}-d_{ii}=0$, then we call it a {\em metric}.
- 
+
 FIGURE: [../figures/triangleineq.eps, frac=0.3]
 
 
@@ -88,7 +88,7 @@ FIGURE: [../figures/triangleineq.eps, frac=0.3]
 ===== Proximity: Continuous measures =====
 
 !bblock Common metrics:
-* Euclidean. 
+* Euclidean.
 
 !bt
 \begin{displaymath}
@@ -118,9 +118,9 @@ d_{ij}^{(M(p))} = \left[ \sum_{k=1}^{N} (x_{ik} - x_{jk})^p \right]^{\frac{1}{p}
 * Many applications consist of binary vectors, typical is "yes"
   and "no" answers to a lot of tests
 * It is tempting to use distance between binary vectors to signify
-  distance. However that is *by far* not optimal. 
+  distance. However that is *by far* not optimal.
 
-\pause 
+\pause
 
 Lets look at an example:
 
@@ -138,14 +138,14 @@ It makes NO SENSE to compute the Euclidean distances between these vectors
 \begin{table}[h]
 \begin{center}
 \begin{tabular}{|c|c|c|}  \hline \hline
-                       & {\em Object B} value 1 & {\em Object B}  value 0  \\ \hline
-{\em Object A} value 1 &      a                 &       b      \\ \hline
-{\em Object A} value 0 &      c                 &       d      \\ \hline \hline
+                   	& {\em Object B} value 1 & {\em Object B}  value 0  \\ \hline
+{\em Object A} value 1 &  	a             	&   	b  	\\ \hline
+{\em Object A} value 0 &  	c             	&   	d  	\\ \hline \hline
 \end{tabular}
 \end{center}
 \end{table}
 !et
- 
+
 
 !bblock Example
 
@@ -156,47 +156,18 @@ It makes NO SENSE to compute the Euclidean distances between these vectors
 \textbf{b} = \left[1~1~0~1\right]  \\ \nonumber
 \end{eqnarray*}
 !et
-!eslidecell 
+!eslidecell
 
 !bslidecell 01
 * $c=2$: two places where A has 0 and B has 1.
 * $d=1$: one place where A and B are equal to 0.
 * $a=1$: one place where A and B are equal to 1.
-!eslidecell 
+!eslidecell
 !eblock
 
 
-
-
 !split
-======= Agglomerative algorithms =======
+===== Classification metric =====
 
-Agglomerative cluster analysis "clumps" objects together according
-to a definition of similarity or dissimilarity. The objects are merged
-progressively into larger clusters until only one cluster remains
-which consists of all the objects in the data set
-
-This can be summarised in a \alert{hierarchical cluster tree}.
-
-\pause
- 
-FIGURE: [../figures/small_tree.eps, frac=0.7]
-
-
-
-
-!split
-===== Clumping objects =====
-One of the simpliest iterative approaches for unsupervised clustering is:
-
-n\_clusters = n\_datapoints
-
-o WHILE no. clusters $>$ 1
-o Find smallest \alert{distance} between clusters A and B
-o Merge clusters A and B
-o Define a new cluster (AB)
-o \alert{Distance} matrix between all clusters
-o ENDWHILE
-
-
+FIGURE: [../figures/classification-score-matrix, frac=1.1]
 

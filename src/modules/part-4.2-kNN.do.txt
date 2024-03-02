@@ -27,7 +27,7 @@ The algorithm for kNN can be formulated as follows:
 
 !bblock
 * Let $\textbf{x}$ be new object to classify
-* FOOR{$i = 1:N$}
+* FOR {$i = 1:N$}
   * $d_{i} = ||\textbf{X}_{i} - \textbf{x}||$
 * ENDFOR
 * Find the $k$ nearest neighbors to $\textbf{x}$ by sorting $d_{i}$
@@ -80,35 +80,10 @@ The main advantages of the method are as follows:
 The results will be dependent on the $k$ parameter:
 
 !bslidecell 00
-FIGURE: [../figures/knn-ex1, frac=0.5]
+FIGURE: [../figures/knn-ex1, frac=1.0]
 !eslidecell
  
 !bslidecell 01
-FIGURE: [../figures/knn-ex2, frac=0.5]
+FIGURE: [../figures/knn-ex2, frac=1.0]
 !eslidecell 
-
-
-
-!split
-===== Validation of k-NN using cross validation =====
-
-A possible solution is to make use of resampling stategies
-such as cross validation:
-
-o Take out $x$ objects from the data set with $n$ objects.
-o Use the remaining $n-x$ objects to predict the class memberships
-  of the $x$ objects
-o Record classification error
-o Put the $x$ objects back in the data set and draw another $x$ objects. 
-o Repeat the process
-
-This CV-loop is performed for every value of $k$ (no. of nearest
-neighbours) and we select the $k$ which has lowest error.
-
-
-!split
-===== Validation of k-NN using cross validation ===== 
-
-FIGURE: [../figures/knn-ex3, frac=1]
-
 

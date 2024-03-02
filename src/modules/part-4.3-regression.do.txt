@@ -1,9 +1,6 @@
 !split
 ======= Linear Regression =======
 
-!split
-===== A _linear model_ =====
-
 Considering a univariate case, we have:
 !bpop
 !bt
@@ -37,8 +34,8 @@ where $\beta_i$ are the arbitrary selected coefficients.
 ===== Model set-up =====
 
 For a given $x$ we do not
-know the true response $q$, only the measurementa $y_i$ for
-experiment $i$. 
+know the true response $q$, only the measurements $y_i$ for
+experiment $i$.
 
 !bpop
 We have that:
@@ -75,7 +72,7 @@ Does $\epsilon_i$ matter? And why so?
 
 
 !split
-===== Estimated model paramters =====
+===== Estimated model parameters =====
 The model parameters $\beta_0,\beta_1$ are unknown, but they can be
 _estimated_. To distinguish estimates from true model parameters
 we call them $b_0,b_1$. These estimates are calculated such that the
@@ -88,7 +85,7 @@ model
 !et
 
 fits the $n$ different experimental observations as well as
-possible. 
+possible.
 
 
 !split
@@ -107,7 +104,7 @@ FIGURE: [../figures/d1_3_1, frac=0.8]
 
 !bblock
 
-@@@CODE ../code/linear_data_truth.py 
+@@@CODE ../code/linear_data_truth.py
 
 !eblock
 
@@ -119,10 +116,10 @@ in general)?
 
 !bpop
 
-That answer to this is *no*. 
-#As we shall see, polynomial regressionis still linear. 
+That answer to this is *no*.
+#As we shall see, polynomial regression is still linear.
 #_Non-linear_ regression models means something
-different.  
+different.
 In general for a model $f$ to be defined linear, it has to be
 linear with respect to the unknown parameters
 $\beta_0,\cdots, \beta_n$. The general linear model is
@@ -159,12 +156,13 @@ For the 1-dimensional problem, we have
 
 !bpop
 where $\hat{y}$ is the estimated y-value from the approximate model
-that has been generated from a set of measurements $(x_i,y_i)$. 
-We aim to find the $b_i$ parameters such that the regression line fits 
-the observed data as well as possible. 
+that has been generated from a set of measurements $(x_i,y_i)$.
+We aim to find the $b_i$ parameters such that the regression line fits
+the observed data as well as possible.
 !epop
 
-!bpop
+!split
+===== Estimation of linear regression parameters =====
 This means we want to minimise the residuals
 
 !bt
@@ -172,7 +170,6 @@ This means we want to minimise the residuals
 e_i = y_i - \hat{y}_i
 \end{displaymath}
 !et
-!epop
 
 \pause
 
@@ -198,23 +195,23 @@ Before to continue, let's make sure to have all the main elements clear:
 o Splitting the data in dependent and independent variables
 o Assumption of a linear model between them
 o Recognise the difference between the truth and the estimation
-o Aiming to *minimize* the residuals 
+o Aiming to *minimize* the residuals
 !epop
 !bpop
 
 !bblock Discussion
-What happen when the sun of residual is 0 ?
+What happens when the residual sum of residuals is equal to  0 ?
 !eblock
 !epop
 
 !bpop
 !bblock
-What happens where the data is heavily correlated? 
+What happens where the data is heavily correlated?
 !eblock
 !epop
 
 
-!split 
+!split
 ===== Regression =====
 To minimize the sum of the square residuals, we can try to solve the following
 equations:
@@ -234,7 +231,7 @@ where:
 \begin{eqnarray*}
 R = \sum_{i=1}^{n}(y_i -  \hat{y}_i)^2  &=& \\ \nonumber
    \sum_{i=1}^{n}\left(y_i - (b_0 + b_1 x_i)\right)^2 = \sum_{i=1}^{n} u_i^2
-%\sum_{i=1}^{n}(y_i - 2b_0 y_i - 2b_1 x_i y_i + 2b_0b_1 x_i + b_0^2 + b_1^2 x_i^2) 
+%\sum_{i=1}^{n}(y_i - 2b_0 y_i - 2b_1 x_i y_i + 2b_0b_1 x_i + b_0^2 + b_1^2 x_i^2)
 \end{eqnarray*}
 !et
 !epop
@@ -270,7 +267,7 @@ Yet, it is important to understand that there is an analytical solution (even if
 
 !bt
 \begin{eqnarray*}
-R &=& \bm{e}^T\bm{e}\\ 
+R &=& \bm{e}^T\bm{e}\\
 &=& (\bm{y} - \hat{\bm{y}})^T(\bm{y} - \hat{\bm{y}})\\
 &=& (\bm{y} - \bm{X}\bm{b})^{T}(\bm{y} - \bm{X}\bm{b}) \\
 &=& (\bm{y}^{T} - \bm{b}^{T}\bm{X}^{T})(\bm{y} - \bm{X}\bm{b}) \\
@@ -303,14 +300,14 @@ R= \bm{y}^{T}\bm{y} - 2 \bm{y}^{T}\bm{X}\bm{b} + \bm{b}^{T}\bm{X}^{T}\bm{X}\bm{b
 
 
 
-!split 
+!split
 ===== General solution =====
 We have from above:
 
 !bt
 \begin{eqnarray*}
 R &=& \bm{y}^{T}\bm{y} - 2\bm{y}^{T}\bm{X}\bm{b} \\
-            &+& \bm{b}^{T}\bm{X}^{T}\bm{X}\bm{b}
+        	&+& \bm{b}^{T}\bm{X}^{T}\bm{X}\bm{b}
 \end{eqnarray*}
 !et
 Vector differentiation gives
@@ -357,6 +354,11 @@ in the equation:
 These equations give us the _multiple linear regression_ (MLR)
 solution.
 !epop
+
+
+
+
+
 
 !split
 ======= Loss function =======
@@ -490,13 +492,6 @@ Log\_Loss = -[y \ log(f(x)) + (1-y) log(1-f(x))]
 
 
 !split
-===== MSE in benchmark =====
-!bblock
-@@@CODE ../code/mse_scaling.py
-!eblock
-
-
-!split
 ===== Coding MSE =====
 !bblock
 @@@CODE ../code/mse_scaling_2.py
@@ -509,5 +504,6 @@ Log\_Loss = -[y \ log(f(x)) + (1-y) log(1-f(x))]
 @@@CODE ../code/mse_scaling_3.py
 !eblock
 
+ 
 
 

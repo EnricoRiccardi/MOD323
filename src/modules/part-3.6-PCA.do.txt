@@ -153,11 +153,3 @@ FIGURE: [../figures/PCA-model1.eps, frac=0.9]
 FIGURE: [../figures/PCA-model2.eps, frac=0.9]
 !eblock
 
-
-!split
-===== Residual variance plot =====
-FIGURE: [../figures/residualvarplot.eps, frac=0.9]
-
-
-
-

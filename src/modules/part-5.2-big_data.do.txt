@@ -1,6 +1,6 @@
-!split 
+!split
 ======= Big Data =======
-Big data has been one of the main keywords to rapresent the latest digital innovation (before AI with gen AI)
+Big data has been one of the main keywords to represent the latest digital innovation (before AI with gen AI)
 
 Big data implies Machine learning applications based on:
 
@@ -10,7 +10,7 @@ o Fast process speed
 o Variety of data types and resolution
 !epop
 
-\pause 
+\pause
 
 Examples:
 * IoT
@@ -24,11 +24,11 @@ Examples:
 
 Big data has to face three main problems:
 !bpop
-o Storage: strategies to dump useless data and/or store conitnuisly generated large data volumes
+o Storage: strategies to dump useless data and/or store continuously generated large data volumes
 
-o Analysis: data has to be indexed and analyzed on-the-fly
+o Analysis: data has to be indexed and analysed on-the-fly
 
-o Privacy: propetary data access has to be limited
+o Privacy: proprietary data access has to be limited
 !epop
 
 \pause
@@ -38,10 +38,12 @@ As one can note, these challenges are still present in gen AI.
 !split
 ===== Goal =====
 
-Big data was considered a revolution, where machine could take over human intelligence thanks 
+Big data was considered a revolution, where machine could take over human intelligence thanks
 to the immense quantity of data available and on the data processing speed.
 
 Now (2024) big data is considered a simple base for gen AI and it is pretty much forgotten by most.
+
+\pause 
 
 !bblock Conclusion
 Big data is a good example of data science marketing.

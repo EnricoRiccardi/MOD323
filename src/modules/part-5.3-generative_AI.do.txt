@@ -4,7 +4,7 @@
 A generative AI model is a type of artificial intelligence that is designed to generate new content, based on the data it has been trained on.
 !eblock
 
-It started in 1932, with the _mechanical brain_ by Georges Artsrouni that was suppoused to translate automatically between languages,
+It started in 1932, with the _mechanical brain_ by Georges Artsrouni that was supposed to translate automatically between languages,
 
 Here "a nice recaps of Generative AI": "https://www.techtarget.com/searchenterpriseai/definition/generative-AI"
 and its "storyline" : "https://cdn.ttgtmedia.com/rms/onlineimages/generative_ai_evolution.png"
@@ -36,7 +36,7 @@ Here a list of possible applications:
 
 * Text(LLM): chatGPT, bard, Gemini, etc.
 
-* Chemistry:  DeepMind (Alphafold).
+* Chemistry:  DeepMind (Alpha Fold).
 
 * Coding (co-pilot)
 
@@ -100,7 +100,7 @@ Image: https://www.rapidops.com
 ===== A new field? =====
 Generative AI is actually a new evolution.
 
-It is based on Neural Network, and in comprises a set of advanced tools (numerical recepites):
+It is based on Neural Network, and in comprises a set of advanced tools (numerical recipes):
 
 \pause
 
@@ -117,3 +117,4 @@ It is quite an advanced technique
 FIGURE: [../figures/Types-of-Generative-AI-models, frac=1]
 
 Source: "Lilian Weng":"https://lilianweng.github.io/posts/2018-10-13-flow-models/"
+

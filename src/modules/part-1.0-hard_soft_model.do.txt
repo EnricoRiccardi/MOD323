@@ -143,7 +143,7 @@ It is a branch of statistical analysis and model that uses spatial and time depe
 !bpop
 * Only a subset of statistical models can be fed with time dependent data (most standard statistical method assume independent, identically distributed, data)
 
-* Spatial and time related data come at a different range of scales. Data collection can be dependent of time and space, resulting in different representativity of a sample.
+* Spatial and time related data come at a different range of scales. Data collection can be dependent on time and space, resulting in different representativity of a sample.
 !epop
 
 
@@ -151,7 +151,7 @@ It is a branch of statistical analysis and model that uses spatial and time depe
 ===== Fields of application =====
 
 !bblock
-Tipical time and spatial data are:
+Typical time and spatial data are:
 !eblock
 
 !bpop
@@ -170,7 +170,7 @@ Tipical time and spatial data are:
 ===== Finding a suitable model =====
 !bslidecell 00
 
-Soft modeling is in most cases
+Soft modelling is in most cases
 based on _multivariate statistical methods_. Many of
 these methods may be viewed as sophisticated ways of
 performing curve fitting to data.
@@ -185,5 +185,6 @@ What would be the best model?
 * Straight?: $y(x) = ax + b$
 * Parabolic?: $y(x) = a x^{2} + bx + c$
 * Trigonometric?: $y(x) = a sin(x) + b cos(x)$
-!eslidecell
+!eslidecell 
+
 

@@ -1,18 +1,18 @@
 
 !split
 ======= k-means cluster analysis =======
-With the raise of Machine Learning, one of the most popular approach is k-means.
+With the rise of Machine Learning, one of the most popular approaches is k-means.
 
 The algorithm consists of:
 
 o Select the number of clusters $K\leq K_{max}$ to look for
 
-o Start by creating $K$  random cluster centres $\textbf{m}_k$
+o Start by creating $K$ random cluster centres $\textbf{m}_k$
 
-o For each object $\textbf{x}_j$ assign it to the cluster center it
+o For each object $\textbf{x}_j$ assign it to the cluster centre it
   is nearest to
 
-o Re-compute center points $\textbf{m}_k$ for the new clusters and
+o Re-compute centre points $\textbf{m}_k$ for the new clusters and
   re-iterate towards convergence
 
 
@@ -62,6 +62,8 @@ FIGURE: [../figures/q_CLUST_1_1p1.eps, frac=0.8]
 FIGURE: [../figures/q_CLUST_1_2p1.eps, frac=0.8]
 
 Each curve is for a dataset with a different distance between clusters.
+
+
 
 
 
