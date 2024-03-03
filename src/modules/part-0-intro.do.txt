@@ -1,26 +1,38 @@
 !split
-===== What are we talking about? =====
-Artificial Intelligence (AI): A field of computer science dedicated to creating systems capable of performing tasks that require human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.
+===== What are we going to talk about? =====
+!bblock Artificial Intelligence (AI)
+A field of computer science dedicated to creating systems capable of performing tasks that require human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.
+!eblock
 
-Machine Learning (ML): A subset of AI that involves the development of algorithms and statistical models that enable computers to perform tasks. A model is tuned in a learning phase and it can then make inferences from unseen data.
+\pause
 
+!bblock Machine Learning (ML)
+A subset of AI that involves the development of algorithms and statistical models that enable computers to perform tasks. A model is tuned in a learning phase and it can then make inferences from unseen data.
+!eblock
 
-AI contains ML.
+\pause 
 
- 
-
-AI contains ML.
-
+!bblock
+AI contains ML (and much more)
+!eblock
 
 !split
 ===== Is it possible to master Machine Learning in Python in two days? =====
+
+\pause 
+
 No.
 
 
 !split
 ===== What is the point then? =====
 ML is an immense field, up to the point that developers are specialising more and more on particular aspects, losing the overall view of the domain.
+
+\pause 
+
 ML can be taught as a very large toolset. Each tool is aimed to solve a particular type of problem. It is up to a user to frame a task (using the domain expertise) as a problem that can be then solved with a ML approach.
+
+\pause 
 
 The aim of this course is exactly this. We will thus get an overview on what questions can be answered with ML, how data might be used and what output can be obtained.
 
@@ -29,18 +41,40 @@ The aim of this course is exactly this. We will thus get an overview on what que
 ===== Why Python? =====
 Most ML/AI developers have released their code as Python packages. By using Python, we can actually use various algorithms that are currently available.
 
+\pause 
+
 This means that, with python, we will be able use and test the newest ML software. We then will be able to make the necessary adaptations for various tasks.
+
+\pause 
+
+!bblock
+Python strenght is its community 
+!eblock
 
 !split
 ===== What to expect? =====
-A good and solid introduction to Machine Learning.
-An introduction to the major ML python libraries available.
-A set of hands-on exercises and tutorials, with applications in geophysics and other areas.
 
+!bblock
+A lot of (nerdy) fun! :) 
+!eblock
+
+!bpop
+* A structured introduction to Machine Learning.
+* An introduction to the major ML python libraries available.
+* A set of hands-on exercises and tutorials, with applications in subsurface.
+!epop
 
 !split
 ===== About this course =====
-My objective with this course is to show how to formulate questions that can be effectively addressed using machine learning approaches. Through various examples, we will explore how data can be gathered, refined, and ideally utilised to train machine learning algorithms. We will also discuss the realistic expectations and limitations of such methods. Moreover, the course will guide you in developing your own Python code to tackle various, manageable ML challenges. We will create ML programs using generative AI and other freely available code repositories within the Python ecosystem.
+My objective with this course is to show how \alert{to formulate questions} that can be effectively addressed using machine learning approaches. 
+
+\pause 
+
+Through various examples, we will explore how data can be gathered, refined, and ideally utilised to train machine learning algorithms. 
+
+\pause 
+
+We will also discuss the realistic expectations and limitations of such methods. Moreover, the course will guide you in developing your own Python code to tackle various, manageable ML challenges. 
 
 !split
 ===== Online Machine Learning python libraries =====
