@@ -1,5 +1,5 @@
 !split
-===== What ML can do in GEO? =====
+======= What ML can do in GEO? =======
 As discussed, Machine learning can be used in a large set of fields. In particular, in geo-applications one can:
 
 !bpop

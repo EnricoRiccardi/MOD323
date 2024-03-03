@@ -4,6 +4,8 @@ We established that machine learning and artificial intelligence is a huge field
 The consequence is that one need to know how to approach the field in order to get
 the proper guidance.
 
+\pause
+
 As a parallel, if you are sick, you need to contact the right person. Contacting a surgeon will
 most likely result in a waste of time, your and her/his. Yet surgeons are between
 the most competent people in medicine.
@@ -12,34 +14,43 @@ the most competent people in medicine.
 ===== Who does what =====
 Different disciplines and thus actors can be involved:
 
-!bpop
-* Data Scientists: They specialise in analysing and interpreting complex datasets using a variety of techniques, including machine learning.
-Data scientists can help you understand whether your problem can be addressed through data analysis and machine learning, and they can develop models to solve it.
+!bblock Data Scientists
+ They specialise in analysing and interpreting complex datasets using a variety of techniques, including machine learning.
+Data scientists can help you understand whether your problem can be addressed through data analysis and machine learning, and they can develop statistical models for it. Statistical models have severe limitations, even when derived from Big Data. (i.e. limited understanding).
+!eblock
 
-* Computational Engineers: These professionals specialise in designing, building, and implementing machine learning models.
-They have a strong background in software engineering along with expertise in machine learning algorithms.
+\pause
 
-* AI Researchers or Specialists: If your problem is highly specialised or requires cutting-edge machine learning techniques,
-consulting with AI researchers or specialists in the specific field of AI that relates to your problem (like natural language processing, computer vision, etc.) might be beneficial.
-
-* Computer Scientists/Software Engineers with ML Experience: Some software engineers or computer scientists,
-though not exclusively focused on machine learning, might have significant experience in applying ML techniques to practical problems.
-
-!epop
-
+!bblock Computational Engineers
+ These professionals specialise in designing, building, and implementing machine learning models.
+They have a strong background in engineering along with expertise in machine learning algorithms. The focus is on the understanding of the problem to solve, which is a much slower and demanding task.
+!eblock
 
 !split
 ===== Who does what =====
-Different disciplines and thus actors can be involved (continue):
+
+!bblock AI Researchers or Specialists:
+When a problem is very well defined and/or requires cutting-edge machine learning techniques,
+consulting with AI researchers or specialists in the specific field of AI that can relate to a target problem (like natural language processing, computer vision, etc.) might be beneficial. This is mostly the generative AI domain, while it has been mostly a failure for ML.
+!ebock
+
+\pause
+
+!bblock Computer Scientists/Software Engineers
+As a large portion in ML is data processing, data privacy and output analysis, significant computational challenges might arise due to Big Data. This is still within AI, yet it is not within ML.
+!eblock
+
+
+!split
+===== A safe way to approach =====
+Machine learning can be thought of as a large and vast set of efficient numerical recipes that can provide statistical insight into problems.
 
 !bpop
-* Industry-Specific Experts with ML Background: Depending on your problem, experts in a particular industry who have experience with machine learning can provide valuable insights.
-For example, for a healthcare-related problem, a bioinformatician or medical informatics professional with machine learning experience could be ideal.
+* There is a large effort of providing ML tool openly
 
-* Consultancy Firms specialising in AI and ML: There are firms that specialise in providing AI and ML solutions to a range of problems across different industries.
-They can offer a *team* of experts to work on your problem.
+* Be able to use ML can be a boomerang (when not knowing the limitations of statistical models)
 
-* Academic Institutions: Universities and research institutions often have departments or labs dedicated to machine learning and AI research.
+* Specialised professional in ML/AI see mostly the data science side: high risk to solve irrelevant questions
 !epop
 
 
@@ -47,14 +58,23 @@ They can offer a *team* of experts to work on your problem.
 ===== Why is it so complicated? =====
 A problem to be addressed by advanced statistical methods needs to be sectioned into its components.
 
-* Data acquisition, data curing/wrangling, data preprocessing and filtering,
-Domain expertise, computational engineers.
+!bblock Domain expertise, computational engineers
+Data acquisition, data curing/wrangling, data preprocessing and filtering,
+!eblock
 
-* Model selection, model training, testing and validation.
-Data scientists/Engineers.
+\pause
 
-* Output stability and reliability.
-Data scientist.
+!bblock Data scientists/Engineers
+Model selection, model training, testing and validation.
+!eblock
+
+\pause
+
+!bblock Data scientist
+Computational stability, speed, privacy and reliability.
+!eblock
+
+
 
 !split
 ===== Bias in approaches selection =====
@@ -62,7 +82,11 @@ As ML users often specialise in one or more methods, there is a consequent prope
 apply such a method into the largest set of applications possible.
 
 While this is humanly understandable, it is not the best practice and can lead to
-bad solution.
+wrong solution that do not even translate into better understanding.
+
+!bblock A statement with tons of bias
+Experience is showing that most out of ML can be obtained by 'enhancing' domain experts.
+!eblock
 
 !split
 ===== Hierarchy of needs =====
@@ -84,17 +108,29 @@ If your intent is not to become a ML developer, you will have to accept to use a
 
 We do not know how a smart-phone works, yet we (assume to) know how to use it!
 
-Is it useful? Is it safe? Is it ethical?
+\pause
 
+!bblock
+* Is it useful?
+* Is it safe?
+* Is it ethical?
+!eblock
 
 !split
-===== Opening a Black Box =====
-But if you need to develop an insight,
-consider interpretable AI methods: it is a whole new exciting field that is now
-emerging.
+===== Some solutions =====
+Data scientist are working hard to try to solve some of the previous questions:
 
-Interpretable AI can be pivotal for ML development, because it allow the consideration of
+Two main interesting initiative:
+
+* Interpretable AI: it aims to show the 'reasoning' of a ML algorithm, which can allow the consideration of
 different ethical concerns.
+* Causal analysis: it aims to find the causal relation between variables (instead of just correlations).
+
+\pause
+
+!bblock Quote Pablo Picasso
+Calculators are useless, they just give answers
+!eblock
 
 
 !split

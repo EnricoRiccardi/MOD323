@@ -46,7 +46,7 @@ Good project are not only used by communities, but also _supported_
 !eblock
 
 Git allows the development of projects without a clear lead.
-The community engagement is generally a desirable target to help developed to directly integrate feedbacks by users (and fix bugs).
+The community engagement is generally a desirable target to help develop to directly integrate feedbacks by users (and fix bugs).
 
 
  

@@ -8,7 +8,7 @@
 !bpop
 * Are there such things as good data and bad data?
 
-!bblock Main lesson (Exam question)
+!bblock Take home message 
 * Data color{red}{ DO NOT always} have value.
 !eblock
 
@@ -16,13 +16,12 @@
 
 * TRASH in TRASH out
 
+* Data without metadata are just numbers (i.e. if they are integers, they are still good to play lottery)
 !epop
 
 
 !split
 ===== MetaData properties =====
-Data without metadata are just numbers
-(i.e. if they are integers, they are still good to play lottery)
 
 Metadata can be pretty much anything. Depending on the application, we can distinguish between:
 !bpop
